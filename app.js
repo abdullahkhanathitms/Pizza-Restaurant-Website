@@ -1,81 +1,88 @@
-// Pizzon - Modern Dark Theme Interactive Application Script
+// Pizza Mania / Universal Pitch Application Script
 
-// Menu Dataset matching Pizzon Template
-const pizzonMenu = [
+// Menu Dataset in Pakistani Rupees (Rs.)
+const pizzaManiaMenu = [
   {
-    id: "pz1",
-    name: "Cheese Pizza",
+    id: "pm1",
+    name: "Chef's Special Tikka Feast Pizza",
     category: "pizza",
-    price: 25.00,
+    price: 1150,
     rating: 5,
-    description: "Handcrafted crust with signature tomato sauce and melted 100% mozzarella cheese blend.",
+    description: "Loaded with spicy chicken tikka chunks, sweet corn, green peppers, black olives & double mozzarella.",
+    prices: { Small: 650, Medium: 1150, Large: 1650 },
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
-    badge: "Popular"
-  },
-  {
-    id: "pz2",
-    name: "Shrimp Pizza",
-    category: "seafood",
-    price: 35.00,
-    rating: 5,
-    description: "Succulent garlic marinated shrimp, fresh herbs, roasted peppers & parmesan mozzarella.",
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",
-    badge: "Special"
-  },
-  {
-    id: "pz3",
-    name: "Seafood Deluxe Pizza",
-    category: "seafood",
-    price: 65.00,
-    rating: 5,
-    description: "Premium seafood medley, calamari, shrimp, cherry tomatoes, and creamy lemon garlic pesto.",
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80",
-    badge: "Chef Choice"
-  },
-  {
-    id: "pz4",
-    name: "Pepperoni Passion",
-    category: "pizza",
-    price: 45.00,
-    rating: 5,
-    description: "Double pepperoni layers, Italian marinara sauce, herbs and molten mozzarella cheese.",
-    image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=800&q=80",
     badge: "Bestseller"
   },
   {
-    id: "pz5",
-    name: "Swiss Mushroom Truffle",
+    id: "pm2",
+    name: "Creamy Malai Crust Pizza",
     category: "pizza",
-    price: 55.00,
+    price: 1250,
     rating: 5,
-    description: "Sauteed wild mushrooms, white truffle oil, caramelized onions, and aged Swiss cheese.",
-    image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=800&q=80",
-    badge: "Gourmet"
+    description: "Juicy malai chicken boti, creamy garlic sauce base, sliced onions & extra stuffed mozzarella crust.",
+    prices: { Small: 720, Medium: 1250, Large: 1750 },
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",
+    badge: "Chef Special"
   },
   {
-    id: "pz6",
-    name: "Barbeque Chicken Feast",
-    category: "chicken",
-    price: 40.00,
+    id: "pm3",
+    name: "Cheesy Pepperoni Overload",
+    category: "pizza",
+    price: 1190,
     rating: 5,
-    description: "Smokey BBQ grilled chicken, red onions, sweet corn, cilantro, and smoked gouda.",
-    image: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=800&q=80",
-    badge: "Favorite"
+    description: "Double crispy beef pepperoni slices over rich marinara sauce and molten double mozzarella.",
+    prices: { Small: 690, Medium: 1190, Large: 1690 },
+    image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=800&q=80",
+    badge: "Classic"
+  },
+  {
+    id: "pm4",
+    name: "Crispy Double Zinger Burger",
+    category: "burgers",
+    price: 490,
+    rating: 5,
+    description: "Crispy fried chicken breast fillet, iceberg lettuce, melted cheddar cheese & house spicy mayo in a toasted bun.",
+    prices: { Single: 490, Combo: 650 },
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
+    badge: "Crispy"
+  },
+  {
+    id: "pm5",
+    name: "Loaded Cheesy Garlic Sticks",
+    category: "sides",
+    price: 390,
+    rating: 5,
+    description: "Oven-fresh breadsticks brushed with garlic herb butter and smothered in gooey melted mozzarella.",
+    prices: { Standard: 390 },
+    image: "https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?auto=format&fit=crop&w=800&q=80",
+    badge: "Hot Side"
+  },
+  {
+    id: "pm6",
+    name: "Spicy Buffalo Wings (6 Pcs)",
+    category: "sides",
+    price: 470,
+    rating: 5,
+    description: "Golden crispy fried wings tossed in signature hot buffalo glaze.",
+    prices: { Standard: 470 },
+    image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=80",
+    badge: "Spicy"
   }
 ];
 
 // State
 let cart = [];
 let activeCategory = "all";
+let selectedFulfillment = "Delivery";
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderPizzonMenu();
+  renderMenu();
   setupEventListeners();
   updateCartUI();
 });
 
 function setupEventListeners() {
-  // Mobile Nav Toggle
+  // Mobile Nav Drawer Toggle
   const menuToggleBtn = document.getElementById("pizzon-menu-toggle");
   const mobileDrawer = document.getElementById("pizzon-mobile-drawer");
   const closeDrawerBtn = document.getElementById("close-pizzon-drawer");
@@ -126,27 +133,33 @@ function setupEventListeners() {
     });
   }
 
-  // Reservation Form Submission
+  // Reservation Form
   const reservationForm = document.getElementById("reservation-form");
   if (reservationForm) {
     reservationForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const name = document.getElementById("res-name")?.value || "Guest";
-      showToast(`Thank you ${name}! Your table reservation request has been submitted successfully.`);
+      showToast(`Thank you ${name}! Your table reservation has been received.`);
       reservationForm.reset();
     });
   }
+
+  // WhatsApp Order Button
+  const whatsappOrderBtn = document.getElementById("whatsapp-order-btn");
+  if (whatsappOrderBtn) {
+    whatsappOrderBtn.addEventListener("click", sendWhatsAppOrder);
+  }
 }
 
-// Render Pizzon Menu Cards
-function renderPizzonMenu() {
+// Render Menu Cards
+function renderMenu() {
   const container = document.getElementById("pizzon-menu-grid");
   if (!container) return;
 
-  const filtered = activeCategory === "all" ? pizzonMenu : pizzonMenu.filter(item => item.category === activeCategory);
+  const filtered = activeCategory === "all" ? pizzaManiaMenu : pizzaManiaMenu.filter(item => item.category === activeCategory);
 
   container.innerHTML = filtered.map(item => `
-    <div class="menu-item-box bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-red-600/50 hover-lift flex flex-col justify-between p-5 relative group">
+    <div class="menu-item-box bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-yellow-500/50 hover-lift flex flex-col justify-between p-5 relative group">
       <!-- Badge -->
       <div class="absolute top-4 left-4 z-10">
         <span class="bg-red-600 text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">${item.badge}</span>
@@ -160,12 +173,12 @@ function renderPizzonMenu() {
       <!-- Item Content -->
       <div>
         <div class="flex items-center justify-between gap-2 mb-2">
-          <h3 class="text-lg font-bold text-white group-hover:text-red-500 transition-colors">${item.name}</h3>
-          <span class="text-lg font-extrabold text-amber-400 font-heading">$${item.price.toFixed(2)}</span>
+          <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-yellow-500 transition-colors">${item.name}</h3>
+          <span class="text-base sm:text-lg font-extrabold text-yellow-400 font-heading">Rs. ${item.price}</span>
         </div>
 
         <!-- 5 Star Rating -->
-        <div class="flex items-center gap-1 text-amber-400 text-xs mb-3">
+        <div class="flex items-center gap-1 text-yellow-400 text-xs mb-3">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -173,20 +186,20 @@ function renderPizzonMenu() {
           <i class="fa-solid fa-star"></i>
         </div>
 
-        <p class="text-zinc-400 text-xs line-clamp-2 leading-relaxed mb-6">${item.description}</p>
+        <p class="text-zinc-400 text-xs line-clamp-2 leading-relaxed mb-4">${item.description}</p>
       </div>
 
       <!-- Order Now Button -->
-      <button onclick="addToPizzonCart('${item.id}')" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-md transition-all active:scale-95">
-        <i class="fa-solid fa-cart-shopping text-sm"></i> Order Now
+      <button onclick="addToCart('${item.id}')" class="w-full btn-yellow text-xs py-3 rounded-xl flex items-center justify-center gap-2 shadow-md">
+        <i class="fa-solid fa-cart-shopping"></i> Add To Order
       </button>
     </div>
   `).join('');
 }
 
-// Add Item to Pizzon Cart
-window.addToPizzonCart = function(itemId) {
-  const item = pizzonMenu.find(i => i.id === itemId);
+// Add Item to Cart
+window.addToCart = function(itemId) {
+  const item = pizzaManiaMenu.find(i => i.id === itemId);
   if (!item) return;
 
   const existing = cart.find(c => c.id === itemId);
@@ -203,23 +216,23 @@ window.addToPizzonCart = function(itemId) {
   }
 
   updateCartUI();
-  showToast(`Added "${item.name}" to your cart! 🍕`);
+  showToast(`Added "${item.name}" to your order! 🍕`);
 };
 
-// Remove item from cart
-window.removeFromPizzonCart = function(itemId) {
+// Remove from cart
+window.removeFromCart = function(itemId) {
   cart = cart.filter(c => c.id !== itemId);
   updateCartUI();
 };
 
-// Update item quantity
-window.updatePizzonQuantity = function(itemId, change) {
+// Change quantity
+window.updateQuantity = function(itemId, change) {
   const item = cart.find(c => c.id === itemId);
   if (!item) return;
 
   item.quantity += change;
   if (item.quantity <= 0) {
-    removeFromPizzonCart(itemId);
+    removeFromCart(itemId);
   } else {
     updateCartUI();
   }
@@ -238,7 +251,7 @@ function updateCartUI() {
   const subtotalEl = document.getElementById("cart-drawer-subtotal");
 
   const subtotal = cart.reduce((sum, i) => sum + (i.price * i.quantity), 0);
-  if (subtotalEl) subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+  if (subtotalEl) subtotalEl.textContent = `Rs. ${subtotal}`;
 
   if (!cartListContainer) return;
 
@@ -246,7 +259,7 @@ function updateCartUI() {
     cartListContainer.innerHTML = `
       <div class="text-center py-12 text-zinc-500">
         <i class="fa-solid fa-pizza-slice text-4xl mb-3 text-zinc-700"></i>
-        <p class="text-sm font-semibold">Your shopping cart is empty</p>
+        <p class="text-sm font-semibold">Your order basket is currently empty</p>
       </div>
     `;
     return;
@@ -257,38 +270,74 @@ function updateCartUI() {
       <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-lg object-cover">
       <div class="flex-1 min-w-0">
         <h4 class="text-xs sm:text-sm font-bold text-white truncate">${item.name}</h4>
-        <span class="text-[11px] text-amber-400 font-extrabold">$${item.price.toFixed(2)}</span>
+        <span class="text-[11px] text-yellow-400 font-extrabold">Rs. ${item.price}</span>
       </div>
 
       <div class="flex items-center gap-2">
-        <button onclick="updatePizzonQuantity('${item.id}', -1)" class="w-6 h-6 rounded bg-zinc-800 text-zinc-300 hover:bg-red-600 hover:text-white flex items-center justify-center text-xs">
+        <button onclick="updateQuantity('${item.id}', -1)" class="w-6 h-6 rounded bg-zinc-800 text-zinc-300 hover:bg-yellow-500 hover:text-zinc-950 flex items-center justify-center text-xs">
           <i class="fa-solid fa-minus"></i>
         </button>
         <span class="text-xs font-bold text-white w-4 text-center">${item.quantity}</span>
-        <button onclick="updatePizzonQuantity('${item.id}', 1)" class="w-6 h-6 rounded bg-zinc-800 text-zinc-300 hover:bg-red-600 hover:text-white flex items-center justify-center text-xs">
+        <button onclick="updateQuantity('${item.id}', 1)" class="w-6 h-6 rounded bg-zinc-800 text-zinc-300 hover:bg-yellow-500 hover:text-zinc-950 flex items-center justify-center text-xs">
           <i class="fa-solid fa-plus"></i>
         </button>
       </div>
 
-      <button onclick="removeFromPizzonCart('${item.id}')" class="text-zinc-500 hover:text-red-500 text-xs p-1">
+      <button onclick="removeFromCart('${item.id}')" class="text-zinc-500 hover:text-red-500 text-xs p-1">
         <i class="fa-solid fa-trash-can"></i>
       </button>
     </div>
   `).join('');
 }
 
-// Show Toast
+// Send WhatsApp Order
+function sendWhatsAppOrder() {
+  if (cart.length === 0) {
+    showToast("Please add items to your cart before ordering!");
+    return;
+  }
+
+  const customerName = document.getElementById("customer-name")?.value || "Valued Customer";
+  const customerPhone = document.getElementById("customer-phone")?.value || "Not provided";
+  const customerAddress = document.getElementById("customer-address")?.value || "Pickup / Call to confirm";
+
+  let message = `🍕 *NEW PIZZA ORDER*\n`;
+  message += `------------------------------------\n`;
+  message += `*Customer:* ${customerName}\n`;
+  message += `*Phone:* ${customerPhone}\n`;
+  message += `*Address:* ${customerAddress}\n`;
+  message += `------------------------------------\n`;
+  message += `*ORDER ITEMS:*\n`;
+
+  let subtotal = 0;
+  cart.forEach((item, idx) => {
+    const itemTotal = item.price * item.quantity;
+    subtotal += itemTotal;
+    message += `${idx + 1}. ${item.name} x${item.quantity} = Rs. ${itemTotal}\n`;
+  });
+
+  message += `------------------------------------\n`;
+  message += `*TOTAL BILL:* Rs. ${subtotal}\n`;
+  message += `------------------------------------\n`;
+  message += `Thank you! Please confirm my order.`;
+
+  const phone = "923000000000";
+  const encodedMsg = encodeURIComponent(message);
+  window.open(`https://wa.me/${phone}?text=${encodedMsg}`, "_blank");
+}
+
+// Toast
 function showToast(message) {
-  let toast = document.getElementById("pizzon-toast");
+  let toast = document.getElementById("custom-toast");
   if (!toast) {
     toast = document.createElement("div");
-    toast.id = "pizzon-toast";
-    toast.className = "fixed bottom-6 right-6 bg-zinc-900 text-white px-5 py-3 rounded-xl shadow-2xl border border-red-600/40 flex items-center gap-3 z-50 transition-all duration-300 opacity-0 translate-y-4";
+    toast.id = "custom-toast";
+    toast.className = "fixed bottom-6 right-6 bg-zinc-900 text-white px-5 py-3 rounded-xl shadow-2xl border border-yellow-500/40 flex items-center gap-3 z-50 transition-all duration-300 opacity-0 translate-y-4";
     document.body.appendChild(toast);
   }
 
   toast.innerHTML = `
-    <div class="w-7 h-7 rounded-full bg-red-600/20 text-red-500 flex items-center justify-center text-xs font-bold">
+    <div class="w-7 h-7 rounded-full bg-yellow-500/20 text-yellow-400 flex items-center justify-center text-xs font-bold">
       <i class="fa-solid fa-pizza-slice"></i>
     </div>
     <span class="text-xs sm:text-sm font-semibold">${message}</span>

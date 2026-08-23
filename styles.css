@@ -1,19 +1,17 @@
-/* Pizzon - Modern Dark Theme Pizza Website Stylesheet */
+/* Pizza Mania / Universal Pitch Template Stylesheet */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Fredoka:wght@500;600;700&display=swap');
 
 :root {
   --primary-red: #DC2626;
   --primary-red-hover: #B91C1C;
-  --accent-yellow: #F59E0B;
-  --accent-yellow-light: #FBBF24;
-  --bg-dark: #09090B;
+  --accent-yellow: #EAB308;
+  --accent-yellow-hover: #CA8A04;
+  --bg-dark: #0A0A0C;
   --bg-surface: #121215;
   --bg-card: #18181B;
   --text-white: #F4F4F5;
   --text-muted: #A1A1AA;
-  --border-dark: rgba(255, 255, 255, 0.08);
-  --border-red-glow: rgba(220, 38, 38, 0.35);
 }
 
 body {
@@ -25,11 +23,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-}
-
-.font-script {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Fredoka', 'Outfit', sans-serif;
 }
 
 /* Custom Scrollbar */
@@ -40,40 +34,56 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   background: var(--bg-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-red);
+  background: var(--accent-yellow);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-red-hover);
+  background: var(--accent-yellow-hover);
 }
 
 /* Glassmorphism Navigation */
 .pizzon-nav {
-  background: rgba(9, 9, 11, 0.94);
+  background: rgba(10, 10, 12, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(220, 38, 38, 0.2);
+  border-bottom: 1px solid rgba(234, 179, 8, 0.2);
 }
 
-/* Hero Background Gradient */
-.pizzon-hero-bg {
+/* Dark Wooden / Reddish Hero Background Texture Pattern */
+.pizza-mania-hero {
   background: 
-    radial-gradient(circle at 75% 25%, rgba(220, 38, 38, 0.28) 0%, transparent 60%),
-    radial-gradient(circle at 20% 70%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
-    linear-gradient(180deg, #1C0404 0%, #09090B 100%);
+    radial-gradient(circle at 75% 30%, rgba(220, 38, 38, 0.35) 0%, transparent 65%),
+    radial-gradient(circle at 25% 65%, rgba(234, 179, 8, 0.15) 0%, transparent 55%),
+    linear-gradient(180deg, #180505 0%, #0A0A0C 100%);
+  position: relative;
 }
 
-/* Glowing Red & Yellow Shadows */
+/* Dark Wooden Board Pattern Overlay */
+.wood-texture-overlay {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Yellow Button Styles matching reference image */
+.btn-yellow {
+  background-color: var(--accent-yellow);
+  color: #0F172A;
+  font-weight: 800;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-yellow:hover {
+  background-color: var(--accent-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(234, 179, 8, 0.4);
+}
+
+/* Red Glow Effects */
 .red-glow {
-  box-shadow: 0 10px 30px -5px rgba(220, 38, 38, 0.5);
-}
-
-.red-glow-lg {
-  box-shadow: 0 20px 50px -5px rgba(220, 38, 38, 0.65);
+  box-shadow: 0 10px 30px -5px rgba(220, 38, 38, 0.55);
 }
 
 .yellow-glow {
-  box-shadow: 0 10px 30px -5px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 10px 30px -5px rgba(234, 179, 8, 0.45);
 }
 
 /* Hover Lift Effect */
@@ -85,37 +95,22 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   box-shadow: 0 20px 30px -10px rgba(220, 38, 38, 0.35);
 }
 
-/* Rotating Pizza Effect on Hover */
+/* Rotating Pizza Visual */
 .rotate-on-hover {
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .rotate-on-hover:hover {
-  transform: rotate(45deg);
+  transform: rotate(30deg) scale(1.03);
 }
 
-/* Buy 1 Get 1 Floating Badge Animation */
-@keyframes spinBadge {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.animate-spin-slow {
-  animation: spinBadge 25s linear infinite;
-}
-
-@keyframes floatElement {
+/* Floating Animations */
+@keyframes floatAnim {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+  50% { transform: translateY(-10px); }
 }
 
 .animate-float {
-  animation: floatElement 4s ease-in-out infinite;
-}
-
-/* Strength Yellow Section in Dark Mode */
-.dark-strength-bg {
-  background: linear-gradient(135deg, #18181B 0%, #09090B 100%);
-  border-y: 1px solid rgba(245, 158, 11, 0.25);
+  animation: floatAnim 4s ease-in-out infinite;
 }
 
 /* Hide scrollbar for category sliders */
