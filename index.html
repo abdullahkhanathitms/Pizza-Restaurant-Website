@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>PIZZA MANIA | Premium Pizza & Fast Food Restaurant</title>
-  <meta name="description" content="Welcome Back To PIZZA MANIA. Handmade pizza with fresh dough, rich mozzarella cheese, and authentic toppings. Order Online in Pakistan.">
+  <title>Universal Dark Red Pizza Website Template</title>
+  <meta name="description" content="Delicious Oven Baked Pizza - Better Ingredients. Better Pizza. Order Online in Pakistan with zero commission.">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,9 +21,8 @@
         extend: {
           colors: {
             pizzonRed: '#DC2626',
-            pizzonYellow: '#EAB308',
-            pizzonYellowHover: '#CA8A04',
-            pizzonDark: '#0A0A0C'
+            pizzonRedDark: '#B91C1C',
+            pizzonDark: '#09090B'
           }
         }
       }
@@ -33,44 +32,44 @@
 <body class="bg-zinc-950 text-zinc-100 antialiased overflow-x-hidden">
 
   <!-- ==========================================
-       1. HEADER / NAVBAR (MATCHING REFERENCE IMAGE)
+       1. HEADER / NAVBAR (LOGO IS ICON ONLY)
   ========================================== -->
   <header class="fixed top-0 left-0 right-0 z-40 pizzon-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo: PIZZA MANIA -->
-      <a href="#home" class="flex items-center gap-2.5 group">
-        <span class="text-2xl sm:text-3xl font-black tracking-tight text-white font-heading">
-          PIZZA <span class="text-yellow-500">MANIA</span>
-        </span>
+      <!-- Brand Logo: ICON ONLY (NO TEXT) -->
+      <a href="#home" class="flex items-center group" title="Pizza Restaurant Logo">
+        <div class="w-11 h-11 bg-red-600 text-white rounded-xl shadow-lg red-glow flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-pizza-slice"></i>
+        </div>
       </a>
 
       <!-- Navigation Links (Centered) -->
       <nav class="hidden md:flex items-center gap-7 lg:gap-9 text-xs sm:text-sm font-bold uppercase tracking-wider text-zinc-300">
-        <a href="#home" class="text-yellow-500 hover:text-yellow-400 transition-colors">Home</a>
-        <a href="#about" class="hover:text-yellow-500 transition-colors">About</a>
-        <a href="#menu" class="hover:text-yellow-500 transition-colors">Menu</a>
-        <a href="#reservation" class="hover:text-yellow-500 transition-colors">Order</a>
-        <a href="#strength" class="hover:text-yellow-500 transition-colors">Why Us</a>
-        <a href="#contact" class="hover:text-yellow-500 transition-colors">Contact</a>
+        <a href="#home" class="text-red-500 hover:text-red-400 transition-colors">Home</a>
+        <a href="#about" class="hover:text-red-500 transition-colors">About</a>
+        <a href="#menu" class="hover:text-red-500 transition-colors">Menu</a>
+        <a href="#reservation" class="hover:text-red-500 transition-colors">Order</a>
+        <a href="#strength" class="hover:text-red-500 transition-colors">Why Us</a>
+        <a href="#contact" class="hover:text-red-500 transition-colors">Contact</a>
       </nav>
 
       <!-- Action Buttons & Icons -->
       <div class="flex items-center gap-3 sm:gap-4">
         
         <!-- Search Trigger -->
-        <button type="button" class="search-trigger text-zinc-300 hover:text-yellow-500 text-lg p-2 transition-colors">
+        <button type="button" class="search-trigger text-zinc-300 hover:text-red-500 text-lg p-2 transition-colors">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
 
-        <!-- Top Right Yellow Button: ORDER NOW -->
-        <button type="button" class="cart-drawer-trigger btn-yellow px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg">
+        <!-- Top Right Button: Order Now -->
+        <button type="button" class="cart-drawer-trigger bg-red-600 hover:bg-red-700 text-white font-extrabold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg red-glow transition-all">
           <span>Order Now</span>
-          <span class="cart-count bg-zinc-950 text-yellow-400 text-xs font-extrabold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+          <span class="cart-count bg-white text-red-600 text-xs font-extrabold w-5 h-5 rounded-full flex items-center justify-center">0</span>
         </button>
 
         <!-- Mobile Drawer Toggle -->
-        <button id="pizzon-menu-toggle" class="md:hidden text-zinc-200 hover:text-yellow-500 p-2 text-2xl" aria-label="Toggle navigation">
+        <button id="pizzon-menu-toggle" class="md:hidden text-zinc-200 hover:text-red-500 p-2 text-2xl" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -82,7 +81,9 @@
   <div id="pizzon-mobile-drawer" class="fixed inset-0 z-50 bg-zinc-950/98 backdrop-blur-2xl translate-x-full transition-transform duration-300 flex flex-col justify-between p-6 md:hidden">
     <div>
       <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
-        <span class="text-2xl font-black text-white font-heading">PIZZA <span class="text-yellow-500">MANIA</span></span>
+        <div class="w-10 h-10 bg-red-600 text-white rounded-xl shadow-lg red-glow flex items-center justify-center text-lg">
+          <i class="fa-solid fa-pizza-slice"></i>
+        </div>
         <button id="close-pizzon-drawer" class="text-zinc-400 hover:text-white text-2xl p-1">
           <i class="fa-solid fa-xmark"></i>
         </button>
@@ -90,8 +91,8 @@
 
       <nav class="flex flex-col gap-4 py-6 text-base font-bold uppercase tracking-wider text-zinc-200">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#menu">Menu Catalog</a>
         <a href="#reservation">Order & Table</a>
         <a href="#strength">Why Us</a>
         <a href="#testimonials">Testimonials</a>
@@ -100,7 +101,7 @@
     </div>
 
     <div class="pt-4 border-t border-zinc-800">
-      <button class="cart-drawer-trigger w-full btn-yellow py-3.5 rounded-xl uppercase font-extrabold flex items-center justify-center gap-2 text-xs">
+      <button class="cart-drawer-trigger w-full bg-red-600 text-white font-extrabold py-3.5 rounded-xl uppercase flex items-center justify-center gap-2 text-xs red-glow">
         <i class="fa-solid fa-cart-shopping"></i> View Cart (<span class="cart-count">0</span>)
       </button>
     </div>
@@ -108,85 +109,75 @@
 
 
   <!-- ==========================================
-       2. HERO BANNER (100% MATCHING UPLOADED IMAGE)
+       2. HERO BANNER (WOOD TEXTURE BACKGROUND + OVERLAY + UPLOADED PIZZA IMAGE)
   ========================================== -->
-  <section id="home" class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-44 lg:pb-32 pizza-mania-hero wood-texture-overlay overflow-hidden">
+  <section id="home" class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 wood-hero-bg overflow-hidden">
     
-    <!-- Red & Yellow Glow Accents -->
-    <div class="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-red-600/30 rounded-full blur-[160px] pointer-events-none"></div>
-    <div class="absolute top-1/3 right-10 w-[250px] sm:w-[450px] h-[250px] sm:h-[450px] bg-yellow-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <!-- Red Glow Accent -->
+    <div class="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-red-600/25 rounded-full blur-[160px] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
-        <!-- Left Content (Matching Reference Layout) -->
-        <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
-          
-          <!-- Tagline with Yellow Dash -->
-          <div class="flex items-center justify-center lg:justify-start gap-3">
-            <span class="w-8 h-1 bg-yellow-500 rounded-full"></span>
-            <span class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-zinc-300 font-heading">
-              HELLO.....
-            </span>
-          </div>
-
-          <!-- Main Banner Headline -->
-          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.1] font-heading">
-            Welcome Back To <br>
-            <span class="text-white drop-shadow-[0_5px_15px_rgba(220,38,38,0.5)]">PIZZAMANIA</span>
-          </h1>
-
-          <!-- Description -->
-          <p class="text-zinc-300 text-xs sm:text-base leading-relaxed max-w-lg mx-auto lg:mx-0 font-normal">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-          </p>
-
-          <!-- Buttons: Yellow ORDER NOW + OUR MENU link -->
-          <div class="flex flex-row items-center justify-center lg:justify-start gap-6 pt-2">
-            <button class="cart-drawer-trigger btn-yellow px-8 py-3.5 rounded-xl uppercase font-black text-xs sm:text-sm tracking-wider shadow-xl">
-              ORDER NOW
-            </button>
-
-            <a href="#menu" class="text-yellow-500 hover:text-yellow-400 font-extrabold uppercase text-xs sm:text-sm tracking-widest transition-colors flex items-center gap-2">
-              OUR MENU
-            </a>
-          </div>
-
-        </div>
-
-        <!-- Right Side: Massive Pizza Platter (Matching Screenshot) -->
-        <div class="lg:col-span-6 relative mt-6 lg:mt-0">
+        <!-- Left Side: Uploaded Pizza Image on Wooden Board with Glass Price Badge -->
+        <div class="lg:col-span-6 relative order-2 lg:order-1">
           <div class="relative mx-auto max-w-md lg:max-w-none text-center">
             
-            <!-- Red Ambient Glow Blob -->
-            <div class="absolute -inset-4 bg-gradient-to-tr from-red-600 to-yellow-500 rounded-full blur-3xl opacity-50 animate-pulse-glow"></div>
+            <!-- Red Glow Backdrop -->
+            <div class="absolute -inset-4 bg-red-600/30 rounded-full blur-3xl opacity-50 animate-pulse-glow"></div>
 
-            <!-- Massive Round Wooden Tray Pizza Image -->
+            <!-- Uploaded Pizza Image (hero-pizza.jpg) -->
             <div class="relative z-10">
-              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80" 
-                alt="Pizza Mania Platter" 
-                class="w-72 sm:w-96 lg:w-[480px] h-72 sm:h-96 lg:h-[480px] object-cover rounded-full mx-auto border-4 border-yellow-500/40 shadow-2xl rotate-on-hover">
+              <img src="hero-pizza.jpg" 
+                alt="Delicious Oven Fresh Pizza" 
+                class="w-72 sm:w-96 lg:w-[480px] h-72 sm:h-96 lg:h-[480px] object-cover rounded-full mx-auto border-4 border-red-600/40 shadow-2xl animate-float">
+              
+              <!-- Frosted Glass Price Badge Overlay -->
+              <div class="absolute bottom-6 right-4 sm:bottom-10 sm:right-10 z-20 glass-price-card px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 border border-red-500/40">
+                <span class="text-xl sm:text-2xl font-black text-white font-heading">Rs. 650</span>
+                <span class="text-xs font-bold text-red-500 uppercase tracking-wider leading-tight text-left">
+                  Get<br>Only
+                </span>
+              </div>
             </div>
 
           </div>
         </div>
 
-      </div>
+        <!-- Right Side: Text Content (Pure Red & Black Theme) -->
+        <div class="lg:col-span-6 space-y-5 text-center lg:text-left order-1 lg:order-2">
+          
+          <!-- Headline: Delicious Pizza -->
+          <div>
+            <span class="text-red-500 font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight block font-heading">
+              Delicious
+            </span>
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[0.95] font-heading">
+              Pizza
+            </h1>
+          </div>
 
-      <!-- Bottom Slider Indicators & Controls (Matching Screenshot) -->
-      <div class="pt-12 flex items-center justify-between border-t border-zinc-800/80 mt-12">
-        <div class="flex items-center gap-3">
-          <span class="w-3.5 h-3.5 rounded-full border-2 border-yellow-500 bg-transparent inline-block"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-zinc-600 inline-block"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-zinc-600 inline-block"></span>
+          <!-- Subtitle: Better Ingredients. Better Pizza -->
+          <h3 class="text-lg sm:text-xl font-extrabold text-zinc-200 tracking-wide">
+            Better Ingredients. Better Pizza
+          </h3>
+
+          <!-- Description -->
+          <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed max-w-lg mx-auto lg:mx-0 font-normal">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis no.
+          </p>
+
+          <!-- Primary Action Button: Red Button Order Now -->
+          <div class="pt-2">
+            <button class="cart-drawer-trigger bg-red-600 hover:bg-red-700 text-white font-extrabold px-9 py-4 rounded-full text-xs sm:text-sm uppercase tracking-wider shadow-2xl red-glow inline-flex items-center gap-2 transition-all hover:scale-105">
+              <span>Order Now</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
         </div>
 
-        <div class="flex items-center gap-4 text-zinc-500 text-lg">
-          <button type="button" class="hover:text-yellow-500 transition-colors p-1"><i class="fa-solid fa-caret-left"></i></button>
-          <button type="button" class="hover:text-yellow-500 transition-colors p-1"><i class="fa-solid fa-caret-right"></i></button>
-        </div>
       </div>
-
     </div>
   </section>
 
@@ -202,13 +193,13 @@
         <div class="lg:col-span-6">
           <div class="relative rounded-3xl overflow-hidden border border-red-600/30 p-2 bg-zinc-950 shadow-2xl red-border-glow">
             <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" 
-              alt="About Pizza Mania" class="w-full h-80 sm:h-96 object-cover rounded-2xl">
+              alt="About Delicious Pizza" class="w-full h-80 sm:h-96 object-cover rounded-2xl">
           </div>
         </div>
 
         <!-- Right Content -->
         <div class="lg:col-span-6 space-y-5">
-          <span class="text-yellow-500 font-extrabold uppercase tracking-widest text-xs">About Our Brand</span>
+          <span class="text-red-500 font-extrabold uppercase tracking-widest text-xs">About Our Brand</span>
           <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">
             Authentic Taste & <span class="text-red-500">Fresh Ingredients</span>
           </h2>
@@ -218,7 +209,7 @@
 
           <div class="grid grid-cols-2 gap-4 pt-2">
             <div class="p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
-              <i class="fa-solid fa-fire text-yellow-500 text-xl mb-2"></i>
+              <i class="fa-solid fa-fire text-red-500 text-xl mb-2"></i>
               <h4 class="text-sm font-bold text-white">Fresh Oven Baked</h4>
               <p class="text-xs text-zinc-400 mt-1">Baked hot to perfection</p>
             </div>
@@ -236,17 +227,17 @@
 
 
   <!-- ==========================================
-       4. OUR MENU (PRICES IN PAKISTANI RUPEES)
+       4. OUR MENU (WITH SMALL/MEDIUM/LARGE SIZE TABS IN EVERY CARD)
   ========================================== -->
   <section id="menu" class="py-20 bg-zinc-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-yellow-500 font-extrabold uppercase tracking-widest text-xs">Explore Our Offerings</span>
+        <span class="text-red-500 font-extrabold uppercase tracking-widest text-xs">Explore Our Offerings</span>
         <h2 class="text-3xl sm:text-5xl font-black text-white mt-1 font-heading">Browse Our <span class="text-red-500">Menu</span></h2>
       </div>
 
-      <!-- Menu Grid (Rendered by app.js with Rs. prices) -->
+      <!-- Menu Grid (Rendered by app.js with Size Tabs & Zoom-In FX) -->
       <div id="pizzon-menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <!-- Rendered dynamically -->
       </div>
@@ -262,14 +253,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-yellow-500 font-extrabold uppercase tracking-widest text-xs">Why We Are The Best</span>
+        <span class="text-red-500 font-extrabold uppercase tracking-widest text-xs">Why We Are The Best</span>
         <h2 class="text-3xl sm:text-5xl font-black text-white mt-1 font-heading">Our Key <span class="text-red-500">Strengths</span></h2>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="p-6 rounded-3xl bg-zinc-950 border border-yellow-500/30 text-center hover-lift">
-          <div class="w-14 h-14 rounded-2xl bg-yellow-500/20 text-yellow-400 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
+        <div class="p-6 rounded-3xl bg-zinc-950 border border-red-600/30 text-center hover-lift">
+          <div class="w-14 h-14 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
             <i class="fa-solid fa-utensils"></i>
           </div>
           <h3 class="text-base font-bold text-white mb-2">All Kinds of Foods</h3>
@@ -284,8 +275,8 @@
           <p class="text-zinc-400 text-xs leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
 
-        <div class="p-6 rounded-3xl bg-zinc-950 border border-yellow-500/30 text-center hover-lift">
-          <div class="w-14 h-14 rounded-2xl bg-yellow-500/20 text-yellow-400 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
+        <div class="p-6 rounded-3xl bg-zinc-950 border border-red-600/30 text-center hover-lift">
+          <div class="w-14 h-14 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
             <i class="fa-solid fa-heart"></i>
           </div>
           <h3 class="text-base font-bold text-white mb-2">Best Taste Guaranteed</h3>
@@ -314,26 +305,26 @@
         
         <!-- Form -->
         <div class="lg:col-span-6 space-y-6">
-          <span class="text-yellow-500 font-extrabold uppercase tracking-widest text-xs">Table Booking</span>
+          <span class="text-red-500 font-extrabold uppercase tracking-widest text-xs">Table Booking</span>
           <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">Book A Table <span class="text-red-500">Now!</span></h2>
           
           <form id="reservation-form" class="space-y-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="text" id="res-name" placeholder="Name*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-yellow-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
-              <input type="email" placeholder="Email*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-yellow-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
+              <input type="text" id="res-name" placeholder="Name*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
+              <input type="email" placeholder="Email*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="tel" placeholder="Phone*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-yellow-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
-              <input type="text" placeholder="Time*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-yellow-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
+              <input type="tel" placeholder="Phone*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
+              <input type="text" placeholder="Time*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="date" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-yellow-500 rounded-2xl px-4 py-3 text-xs text-zinc-300 focus:outline-none">
-              <input type="number" placeholder="Guests (Persons)*" min="1" max="20" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-yellow-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
+              <input type="date" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-zinc-300 focus:outline-none">
+              <input type="number" placeholder="Guests (Persons)*" min="1" max="20" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
             </div>
 
-            <button type="submit" class="w-full btn-yellow py-4 rounded-2xl text-xs uppercase tracking-wider font-black">
+            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-2xl text-xs uppercase tracking-wider shadow-lg red-glow">
               Book Now
             </button>
           </form>
@@ -344,7 +335,7 @@
           <div class="relative mx-auto max-w-md">
             <div class="absolute -inset-4 bg-red-600/20 rounded-full blur-3xl opacity-50"></div>
             <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" 
-              alt="Reservation Pizza" class="relative z-10 w-80 h-80 sm:w-96 sm:h-96 object-cover rounded-full mx-auto border-4 border-yellow-500/40 shadow-2xl">
+              alt="Reservation Pizza" class="relative z-10 w-80 h-80 sm:w-96 sm:h-96 object-cover rounded-full mx-auto border-4 border-red-600/40 shadow-2xl">
           </div>
         </div>
 
@@ -360,7 +351,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-yellow-500 font-extrabold uppercase tracking-widest text-xs">Customer Reviews</span>
+        <span class="text-red-500 font-extrabold uppercase tracking-widest text-xs">Customer Reviews</span>
         <h2 class="text-3xl sm:text-5xl font-black text-white mt-1 font-heading">Client <span class="text-red-500">Testimonials</span></h2>
       </div>
 
@@ -368,7 +359,7 @@
         
         <div class="p-6 rounded-3xl bg-zinc-950 border border-zinc-800 hover-lift flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-yellow-500 text-xs mb-4">
+            <div class="flex items-center gap-1 text-red-500 text-xs mb-4">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -393,7 +384,7 @@
 
         <div class="p-6 rounded-3xl bg-zinc-950 border border-zinc-800 hover-lift flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-yellow-500 text-xs mb-4">
+            <div class="flex items-center gap-1 text-red-500 text-xs mb-4">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -406,7 +397,7 @@
           </div>
 
           <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-            <div class="w-10 h-10 rounded-full bg-yellow-500 text-zinc-950 font-bold flex items-center justify-center text-xs">
+            <div class="w-10 h-10 rounded-full bg-zinc-800 text-red-500 font-bold flex items-center justify-center text-xs">
               SK
             </div>
             <div>
@@ -418,7 +409,7 @@
 
         <div class="p-6 rounded-3xl bg-zinc-950 border border-zinc-800 hover-lift flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-yellow-500 text-xs mb-4">
+            <div class="flex items-center gap-1 text-red-500 text-xs mb-4">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -455,11 +446,13 @@
         
         <!-- Column 1: Info -->
         <div>
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">PIZZA MANIA</h4>
+          <div class="w-10 h-10 bg-red-600 text-white rounded-xl shadow-lg red-glow flex items-center justify-center text-lg mb-3">
+            <i class="fa-solid fa-pizza-slice"></i>
+          </div>
           <p class="text-xs leading-relaxed text-zinc-400 mb-4">
             Your destination for fresh handmade pizzas, zinger burgers, garlic breadsticks, and family deals.
           </p>
-          <div class="text-xs font-bold text-yellow-500">
+          <div class="text-xs font-bold text-red-500">
             <i class="fa-solid fa-phone mr-1"></i> +92 3XX XXXXXXX
           </div>
         </div>
@@ -468,10 +461,10 @@
         <div>
           <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Quick Links</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="#home" class="hover:text-yellow-500 transition-colors">Home</a></li>
-            <li><a href="#about" class="hover:text-yellow-500 transition-colors">About Us</a></li>
-            <li><a href="#menu" class="hover:text-yellow-500 transition-colors">Menu Catalog</a></li>
-            <li><a href="#reservation" class="hover:text-yellow-500 transition-colors">Book A Table</a></li>
+            <li><a href="#home" class="hover:text-red-500 transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-red-500 transition-colors">About Us</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Menu Catalog</a></li>
+            <li><a href="#reservation" class="hover:text-red-500 transition-colors">Book A Table</a></li>
           </ul>
         </div>
 
@@ -479,10 +472,10 @@
         <div>
           <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Top Items</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="#menu" class="hover:text-yellow-500 transition-colors">Chicken Tikka Feast</a></li>
-            <li><a href="#menu" class="hover:text-yellow-500 transition-colors">Creamy Malai Crust</a></li>
-            <li><a href="#menu" class="hover:text-yellow-500 transition-colors">Pepperoni Overload</a></li>
-            <li><a href="#menu" class="hover:text-yellow-500 transition-colors">Cheesy Garlic Sticks</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Chicken Tikka Feast</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Creamy Malai Crust</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Pepperoni Overload</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Cheesy Garlic Sticks</a></li>
           </ul>
         </div>
 
@@ -492,7 +485,7 @@
           <p class="text-xs leading-relaxed mb-4 text-zinc-400">
             Order directly on WhatsApp with zero app commission.
           </p>
-          <button class="cart-drawer-trigger btn-yellow w-full py-2.5 rounded-xl text-xs uppercase font-extrabold">
+          <button class="cart-drawer-trigger bg-red-600 hover:bg-red-700 text-white w-full py-2.5 rounded-xl text-xs uppercase font-extrabold red-glow">
             Order Now
           </button>
         </div>
@@ -500,7 +493,7 @@
       </div>
 
       <div class="pt-8 border-t border-zinc-900 text-center text-xs text-zinc-500">
-        <p>© 2026 PIZZA MANIA. All Rights Reserved. Universal Pitch Template.</p>
+        <p>© 2026 Pizza Restaurant. All Rights Reserved. Universal Red & Black Dark Theme Pitch Edition.</p>
       </div>
     </div>
   </footer>
@@ -535,7 +528,7 @@
       <div class="pt-4 border-t border-zinc-800 space-y-3">
         <div class="flex items-center justify-between text-base font-extrabold text-white">
           <span>Total Bill:</span>
-          <span id="cart-drawer-subtotal" class="text-yellow-400">Rs. 0</span>
+          <span id="cart-drawer-subtotal" class="text-red-500 font-heading">Rs. 0</span>
         </div>
 
         <button id="whatsapp-order-btn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg">
@@ -557,10 +550,10 @@
         </button>
       </div>
 
-      <h3 class="text-2xl font-bold text-white font-heading">Search Pizza Mania Menu</h3>
+      <h3 class="text-2xl font-bold text-white font-heading">Search Menu</h3>
       <div class="relative">
-        <input type="text" placeholder="Search tikka pizza, burger, wings..." class="w-full bg-zinc-900 border border-zinc-700 focus:border-yellow-500 text-white rounded-2xl px-6 py-4 text-base focus:outline-none">
-        <button type="button" onclick="showToast('Searching menu...')" class="absolute right-3 top-1/2 -translate-y-1/2 btn-yellow px-5 py-2.5 rounded-xl font-bold text-xs uppercase">
+        <input type="text" placeholder="Search pizza, burger, wings..." class="w-full bg-zinc-900 border border-zinc-700 focus:border-red-500 text-white rounded-2xl px-6 py-4 text-base focus:outline-none">
+        <button type="button" onclick="showToast('Searching menu...')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 text-xs uppercase font-extrabold rounded-xl">
           Search
         </button>
       </div>
