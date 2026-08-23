@@ -1,82 +1,35 @@
-/* White-Label Reusable Restaurant Pitch Template Styles */
+/* Pizzon - Modern Dark Theme Pizza Website Stylesheet */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Pacifico&display=swap');
 
 :root {
-  --primary: #DC2626;
-  --primary-hover: #B91C1C;
-  --primary-glow: rgba(220, 38, 38, 0.35);
-  --accent-gold: #F59E0B;
-}
-
-/* Default Dark Theme Variable Definitions */
-body.dark-mode {
-  --bg-main: #09090B;
+  --primary-red: #DC2626;
+  --primary-red-hover: #B91C1C;
+  --accent-yellow: #F59E0B;
+  --accent-yellow-light: #FBBF24;
+  --bg-dark: #09090B;
   --bg-surface: #121215;
   --bg-card: #18181B;
-  --bg-hero: radial-gradient(circle at 50% 15%, rgba(220, 38, 38, 0.35) 0%, transparent 65%), linear-gradient(180deg, #450A0A 0%, #140505 45%, #09090B 100%);
-  --text-main: #F4F4F5;
+  --text-white: #F4F4F5;
   --text-muted: #A1A1AA;
-  --border-color: rgba(220, 38, 38, 0.25);
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --nav-bg: rgba(9, 9, 11, 0.94);
-}
-
-/* Light Theme Variable Definitions */
-body.light-mode {
-  --bg-main: #F8FAFC;
-  --bg-surface: #FFFFFF;
-  --bg-card: #FFFFFF;
-  --bg-hero: radial-gradient(circle at 50% 15%, rgba(254, 226, 226, 0.9) 0%, transparent 70%), linear-gradient(180deg, #FFF1F2 0%, #F8FAFC 60%, #F8FAFC 100%);
-  --text-main: #0F172A;
-  --text-muted: #64748B;
-  --border-color: rgba(220, 38, 38, 0.2);
-  --border-subtle: rgba(0, 0, 0, 0.08);
-  --nav-bg: rgba(255, 255, 255, 0.94);
+  --border-dark: rgba(255, 255, 255, 0.08);
+  --border-red-glow: rgba(220, 38, 38, 0.35);
 }
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: var(--bg-main);
-  color: var(--text-main);
+  background-color: var(--bg-dark);
+  color: var(--text-white);
   overflow-x: hidden;
   width: 100%;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, .font-heading {
+h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Dynamic Section Background Helpers */
-.theme-surface {
-  background-color: var(--bg-surface);
-}
-
-.theme-card {
-  background-color: var(--bg-card);
-  border-color: var(--border-subtle);
-}
-
-.glass-nav {
-  background: var(--nav-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-color);
-}
-
-/* Hero Section Gradient */
-.bg-hero-reddish {
-  background: var(--bg-hero);
-}
-
-/* Hide scrollbar for category tabs on mobile */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.font-script {
+  font-family: 'Pacifico', cursive;
 }
 
 /* Custom Scrollbar */
@@ -84,69 +37,92 @@ h1, h2, h3, h4, .font-heading {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-main);
+  background: var(--bg-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: var(--primary-red);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-hover);
+  background: var(--primary-red-hover);
 }
 
-/* Glow & Border FX */
+/* Glassmorphism Navigation */
+.pizzon-nav {
+  background: rgba(9, 9, 11, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+/* Hero Background Gradient */
+.pizzon-hero-bg {
+  background: 
+    radial-gradient(circle at 75% 25%, rgba(220, 38, 38, 0.28) 0%, transparent 60%),
+    radial-gradient(circle at 20% 70%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
+    linear-gradient(180deg, #1C0404 0%, #09090B 100%);
+}
+
+/* Glowing Red & Yellow Shadows */
 .red-glow {
-  box-shadow: 0 10px 30px -5px rgba(220, 38, 38, 0.55);
+  box-shadow: 0 10px 30px -5px rgba(220, 38, 38, 0.5);
 }
 
 .red-glow-lg {
-  box-shadow: 0 20px 50px -5px rgba(220, 38, 38, 0.7);
+  box-shadow: 0 20px 50px -5px rgba(220, 38, 38, 0.65);
 }
 
-.red-border-glow {
-  border: 1px solid rgba(220, 38, 38, 0.45);
-  box-shadow: 0 0 25px rgba(220, 38, 38, 0.25);
+.yellow-glow {
+  box-shadow: 0 10px 30px -5px rgba(245, 158, 11, 0.4);
 }
 
-/* Hover Lift */
+/* Hover Lift Effect */
 .hover-lift {
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hover-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 30px -10px rgba(220, 38, 38, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px -10px rgba(220, 38, 38, 0.35);
 }
 
-.food-card-img {
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+/* Rotating Pizza Effect on Hover */
+.rotate-on-hover {
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.food-card:hover .food-card-img {
-  transform: scale(1.08);
+.rotate-on-hover:hover {
+  transform: rotate(45deg);
 }
 
-@keyframes float {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(1deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
+/* Buy 1 Get 1 Floating Badge Animation */
+@keyframes spinBadge {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinBadge 25s linear infinite;
+}
+
+@keyframes floatElement {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
 }
 
 .animate-float {
-  animation: float 5s ease-in-out infinite;
+  animation: floatElement 4s ease-in-out infinite;
 }
 
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.55; transform: scale(1); }
-  50% { opacity: 0.9; transform: scale(1.04); }
+/* Strength Yellow Section in Dark Mode */
+.dark-strength-bg {
+  background: linear-gradient(135deg, #18181B 0%, #09090B 100%);
+  border-y: 1px solid rgba(245, 158, 11, 0.25);
 }
 
-.animate-pulse-glow {
-  animation: pulseGlow 3.5s ease-in-out infinite;
+/* Hide scrollbar for category sliders */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
-
-/* Mobile responsive typography adjustments */
-@media (max-width: 640px) {
-  .hero-headline {
-    font-size: 2.25rem !important;
-    line-height: 1.15 !important;
-  }
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

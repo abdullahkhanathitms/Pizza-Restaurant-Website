@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Premium Restaurant Website Template | Demo Presentation</title>
-  <meta name="description" content="Custom high-converting website design for pizza & food restaurants. Complete with online ordering, mobile responsiveness, and menu showcase.">
+  <title>Pizzon - Modern Pizza & Fast Food Restaurant</title>
+  <meta name="description" content="Pizzon - Handmade with an extra pinch of love. Daily fresh and always tasty pizza, burgers, and fast food.">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,76 +20,63 @@
       theme: {
         extend: {
           colors: {
-            brandRed: '#DC2626',
-            brandRedHover: '#B91C1C',
-            brandRedDark: '#450A0A',
-            brandGold: '#F59E0B'
+            pizzonRed: '#DC2626',
+            pizzonRedDark: '#B91C1C',
+            pizzonYellow: '#F59E0B',
+            pizzonZinc: '#18181B'
           }
         }
       }
     }
   </script>
 </head>
-<body class="dark-mode antialiased overflow-x-hidden">
+<body class="bg-zinc-950 text-zinc-100 antialiased overflow-x-hidden">
 
   <!-- ==========================================
-       1. HEADER / NAVBAR WITH THEME TOGGLE
+       1. HEADER / NAVBAR
   ========================================== -->
-  <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <header class="fixed top-0 left-0 right-0 z-40 pizzon-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo Placeholder -->
-      <a href="#home" class="flex items-center gap-2.5 sm:gap-3 group min-w-0">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-red-700 to-red-500 flex items-center justify-center text-white text-lg sm:text-xl shadow-lg red-glow group-hover:scale-105 transition-transform flex-shrink-0">
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-red-600 flex items-center justify-center text-white text-xl shadow-lg red-glow group-hover:scale-105 transition-transform">
           <i class="fa-solid fa-pizza-slice"></i>
         </div>
-        <div class="min-w-0">
-          <span class="text-lg sm:text-2xl font-extrabold tracking-tight font-heading block truncate">
-            [YOUR <span class="text-red-500">LOGO</span> HERE]
+        <div>
+          <span class="text-2xl font-black tracking-tight text-white font-heading">
+            PIZZ<span class="text-red-500">ON</span>
           </span>
-          <span class="block text-[9px] sm:text-[10px] uppercase tracking-widest text-zinc-400 font-semibold truncate">Your Restaurant Name • City</span>
+          <span class="block text-[9px] uppercase tracking-widest text-amber-400 font-semibold">Pizza & Fast Food</span>
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-zinc-300">
-        <a href="#home" class="hover:text-red-500 transition-colors">Home</a>
-        <a href="#highlights" class="hover:text-red-500 transition-colors">Highlights</a>
-        <a href="#menu" class="hover:text-red-500 transition-colors">Menu</a>
-        <a href="#deals" class="hover:text-red-500 transition-colors">Promos & Deals</a>
-        <a href="#about" class="hover:text-red-500 transition-colors">About Us</a>
-        <a href="#reviews" class="hover:text-red-500 transition-colors">Reviews</a>
-        <a href="#contact" class="hover:text-red-500 transition-colors">Contact</a>
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-zinc-300">
+        <a href="#home" class="text-white hover:text-red-500 transition-colors">Home</a>
+        <a href="#menu" class="hover:text-red-500 transition-colors">Shop</a>
+        <a href="#story" class="hover:text-red-500 transition-colors">About Us</a>
+        <a href="#strength" class="hover:text-red-500 transition-colors">Pages</a>
+        <a href="#blog" class="hover:text-red-500 transition-colors">Blog</a>
+        <a href="#reservation" class="hover:text-red-500 transition-colors">Contact</a>
       </nav>
 
-      <!-- Desktop Action Buttons & Theme Switcher -->
-      <div class="hidden sm:flex items-center gap-3 lg:gap-4">
-        
-        <!-- Theme Toggle Button -->
-        <button type="button" class="theme-toggle-btn p-2.5 rounded-xl bg-zinc-800/80 hover:bg-zinc-700 border border-zinc-700 text-lg transition-colors" title="Toggle Light / Dark Theme">
-          <i class="theme-toggle-icon fa-solid fa-sun text-amber-400"></i>
+      <!-- Action Icons (Search + Cart) -->
+      <div class="flex items-center gap-4">
+        <!-- Search Trigger -->
+        <button type="button" class="search-trigger text-zinc-300 hover:text-red-500 text-lg p-2 transition-colors">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
 
-        <a href="tel:+923000000000" class="flex items-center gap-2 text-xs font-bold bg-red-950/40 hover:bg-red-900/60 px-3.5 py-2.5 rounded-xl border border-red-600/30 transition-colors">
-          <i class="fa-solid fa-phone text-red-500"></i> +92 3XX XXXXXXX
-        </a>
-
-        <!-- Cart Trigger Button -->
-        <button class="cart-trigger relative bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-4 py-2.5 rounded-xl shadow-lg red-glow text-xs sm:text-sm flex items-center gap-2 transition-all active:scale-95">
-          <i class="fa-solid fa-cart-shopping"></i> Order Now
-          <span id="cart-count-badge" class="cart-count bg-white text-red-600 text-xs font-extrabold w-5 h-5 rounded-full flex items-center justify-center">0</span>
-        </button>
-      </div>
-
-      <!-- Mobile Right Actions -->
-      <div class="flex items-center gap-2 md:hidden">
-        <!-- Theme Toggle Button Mobile -->
-        <button type="button" class="theme-toggle-btn p-2 rounded-lg bg-zinc-800 border border-zinc-700 text-base" title="Toggle Theme">
-          <i class="theme-toggle-icon fa-solid fa-sun text-amber-400"></i>
+        <!-- Cart Drawer Trigger -->
+        <button type="button" class="cart-drawer-trigger relative bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2.5 rounded-xl shadow-lg red-glow text-xs sm:text-sm flex items-center gap-2 transition-all active:scale-95">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="hidden sm:inline">Order Now</span>
+          <span class="cart-count bg-white text-red-600 text-xs font-extrabold w-5 h-5 rounded-full flex items-center justify-center">0</span>
         </button>
 
-        <!-- Mobile Hamburger Button -->
-        <button id="mobile-menu-btn" class="text-zinc-200 hover:text-white p-2 text-2xl focus:outline-none flex-shrink-0" aria-label="Toggle navigation">
+        <!-- Mobile Drawer Toggle -->
+        <button id="pizzon-menu-toggle" class="md:hidden text-zinc-200 hover:text-white p-2 text-2xl" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -97,172 +84,99 @@
     </div>
   </header>
 
-  <!-- Mobile Nav Drawer Overlay -->
-  <div id="mobile-nav" class="fixed inset-0 z-50 bg-zinc-950/98 backdrop-blur-2xl translate-x-full transition-transform duration-300 flex flex-col justify-between p-6 md:hidden">
+  <!-- Mobile Drawer Overlay -->
+  <div id="pizzon-mobile-drawer" class="fixed inset-0 z-50 bg-zinc-950/98 backdrop-blur-2xl translate-x-full transition-transform duration-300 flex flex-col justify-between p-6 md:hidden">
     <div>
-      <div class="flex items-center justify-between pb-6 border-b border-red-900/30">
+      <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center text-white text-lg font-bold red-glow">
             <i class="fa-solid fa-pizza-slice"></i>
           </div>
-          <span class="text-xl font-bold text-white font-heading">[YOUR BRAND]</span>
+          <span class="text-xl font-bold text-white font-heading">PIZZON</span>
         </div>
-        <button id="close-mobile-nav" class="text-zinc-400 hover:text-white text-2xl p-1">
+        <button id="close-pizzon-drawer" class="text-zinc-400 hover:text-white text-2xl p-1">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
-      <nav class="flex flex-col gap-4 py-6 text-base sm:text-lg font-semibold text-zinc-200">
-        <a href="#home" class="py-1 hover:text-red-500 transition-colors">Home</a>
-        <a href="#highlights" class="py-1 hover:text-red-500 transition-colors">Highlights</a>
-        <a href="#menu" class="py-1 hover:text-red-500 transition-colors">Menu Catalog</a>
-        <a href="#deals" class="py-1 hover:text-red-500 transition-colors">Special Offers</a>
-        <a href="#about" class="py-1 hover:text-red-500 transition-colors">About Us</a>
-        <a href="#reviews" class="py-1 hover:text-red-500 transition-colors">Customer Reviews</a>
-        <a href="#why-us" class="py-1 hover:text-red-500 transition-colors">Why Choose Us</a>
-        <a href="#contact" class="py-1 hover:text-red-500 transition-colors">Location & Contact</a>
+      <nav class="flex flex-col gap-4 py-6 text-lg font-semibold text-zinc-200">
+        <a href="#home">Home</a>
+        <a href="#menu">Shop Menu</a>
+        <a href="#story">Our Story</a>
+        <a href="#strength">Our Strength</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#reservation">Book Table</a>
+        <a href="#blog">Latest Blog</a>
       </nav>
     </div>
 
-    <div class="space-y-3 pt-4 border-t border-red-900/30">
-      <a href="tel:+923000000000" class="w-full bg-red-950/60 border border-red-600/40 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm">
-        <i class="fa-solid fa-phone text-red-500"></i> Call +92 3XX XXXXXXX
-      </a>
-      <button class="cart-trigger w-full bg-gradient-to-r from-red-600 to-red-700 text-white font-extrabold py-3.5 rounded-xl shadow-lg red-glow flex items-center justify-center gap-2 text-sm">
-        <i class="fa-solid fa-bag-shopping"></i> View Cart & Order (<span class="cart-count">0</span>)
+    <div class="pt-4 border-t border-zinc-800">
+      <button class="cart-drawer-trigger w-full bg-red-600 text-white font-bold py-3.5 rounded-xl shadow-lg red-glow flex items-center justify-center gap-2 text-sm">
+        <i class="fa-solid fa-bag-shopping"></i> Shopping Cart (<span class="cart-count">0</span>)
       </button>
     </div>
   </div>
 
 
   <!-- ==========================================
-       2. ENHANCED HERO BANNER (MASSIVE PIZZA VISUAL)
+       2. HERO BANNER SECTION
   ========================================== -->
-  <section id="home" class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-hero-reddish">
-    
-    <!-- Massive Deep Red Ambient Glow Blobs -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[750px] h-[400px] sm:h-[750px] bg-red-600/30 rounded-full blur-[160px] pointer-events-none"></div>
-    <div class="absolute top-1/3 right-5 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-red-500/25 rounded-full blur-[130px] pointer-events-none"></div>
-
+  <section id="home" class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-44 lg:pb-36 pizzon-hero-bg overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
-        <!-- Hero Text Content -->
-        <div class="lg:col-span-6 space-y-5 sm:space-y-6 text-center lg:text-left">
+        <!-- Left Banner Content -->
+        <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+          <span class="text-amber-400 font-script text-2xl sm:text-3xl block">Delicious Pizza Craving</span>
           
-          <!-- Trust Badge -->
-          <div class="inline-flex items-center gap-2 bg-red-950/80 border border-red-500/40 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-lg red-border-glow">
-            <span class="flex items-center gap-1 text-amber-400 text-xs sm:text-sm font-extrabold">
-              <i class="fa-solid fa-star"></i> 4.9 ★ Rating
-            </span>
-            <span class="text-red-400/60 text-xs">•</span>
-            <span class="text-zinc-200 text-xs font-semibold">100+ Happy Customers</span>
-            <span class="text-red-400/60 text-xs">•</span>
-            <span class="text-red-400 text-xs font-bold uppercase tracking-wide">Delivery & Takeout</span>
-          </div>
-
-          <!-- Main Headline -->
-          <h1 class="hero-headline text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15] sm:leading-[1.1] font-heading">
-            Delicious Hot Pizzas & Food Delivered To <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-amber-400 drop-shadow-[0_5px_20px_rgba(220,38,38,0.5)]">Your Doorstep!</span>
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.1] font-heading">
+            Handmade, With an Extra Pinch of <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-400">Love</span>
           </h1>
 
-          <!-- Description -->
-          <p class="text-zinc-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-            Welcome to <strong class="text-white font-bold">[YOUR RESTAURANT NAME]</strong> — your local destination for oven-fresh specialty pizzas, juicy burgers, cheesy sides, and value meal deals.
+          <p class="text-zinc-300 text-sm sm:text-base lg:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Freshly baked oven crusts prepared with authentic ingredients.
           </p>
 
-          <!-- Action Buttons -->
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
-            <button class="cart-trigger w-full sm:w-auto bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-extrabold px-8 py-4 rounded-xl shadow-xl red-glow-lg text-base flex items-center justify-center gap-3 transition-all hover:scale-105 active:scale-95">
-              <i class="fa-solid fa-pizza-slice text-lg"></i> Order Direct Now
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <button class="cart-drawer-trigger w-full sm:w-auto bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-black px-8 py-4 rounded-2xl shadow-xl red-glow-lg text-base flex items-center justify-center gap-3 transition-all hover:scale-105 active:scale-95">
+              <i class="fa-solid fa-cart-shopping text-lg"></i> Order Now
             </button>
             
-            <a href="#menu" class="w-full sm:w-auto bg-red-950/70 hover:bg-red-900/90 text-zinc-100 font-bold px-7 py-4 rounded-xl border border-red-500/40 text-base flex items-center justify-center gap-2 transition-all">
-              <i class="fa-solid fa-book-open"></i> Browse Menu
+            <a href="#menu" class="w-full sm:w-auto bg-zinc-900 hover:bg-zinc-800 text-zinc-100 font-bold px-7 py-4 rounded-2xl border border-zinc-700 text-base flex items-center justify-center gap-2 transition-all">
+              <i class="fa-solid fa-utensils text-amber-400"></i> Explore Menu
             </a>
           </div>
-
-          <!-- Service Badges -->
-          <div class="pt-6 border-t border-red-900/40 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl mx-auto lg:mx-0">
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-red-950/50 border border-red-500/20">
-              <div class="w-10 h-10 rounded-lg bg-red-600/20 text-red-400 flex items-center justify-center text-lg flex-shrink-0">
-                <i class="fa-solid fa-motorcycle"></i>
-              </div>
-              <div class="text-left min-w-0">
-                <span class="block text-xs font-bold text-white truncate">Fast Delivery</span>
-                <span class="block text-[11px] text-zinc-400 truncate">30-45 Mins</span>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-red-950/50 border border-red-500/20">
-              <div class="w-10 h-10 rounded-lg bg-red-600/20 text-red-400 flex items-center justify-center text-lg flex-shrink-0">
-                <i class="fa-solid fa-bag-shopping"></i>
-              </div>
-              <div class="text-left min-w-0">
-                <span class="block text-xs font-bold text-white truncate">Hot Takeout</span>
-                <span class="block text-[11px] text-zinc-400 truncate">Ready in 15 Mins</span>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-red-950/50 border border-red-500/20">
-              <div class="w-10 h-10 rounded-lg bg-red-600/20 text-red-400 flex items-center justify-center text-lg flex-shrink-0">
-                <i class="fa-solid fa-utensils"></i>
-              </div>
-              <div class="text-left min-w-0">
-                <span class="block text-xs font-bold text-white truncate">Dine-In Spot</span>
-                <span class="block text-[11px] text-zinc-400 truncate">Family Friendly</span>
-              </div>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Huge Pizza Visual & Floating Badges -->
-        <div class="lg:col-span-6 relative mt-6 lg:mt-0">
-          <div class="relative mx-auto max-w-lg lg:max-w-none">
-            <!-- Pulsing Red Glow Backdrop -->
-            <div class="absolute -inset-6 bg-gradient-to-tr from-red-600 to-amber-500 rounded-full blur-3xl opacity-45 animate-pulse-glow"></div>
-            
-            <!-- Massive Pizza Image Container -->
-            <div class="relative rounded-3xl overflow-hidden border-2 border-red-500/50 p-2 shadow-2xl red-border-glow bg-zinc-950">
-              <div class="relative h-80 sm:h-96 lg:h-[450px] rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=80" 
-                  alt="Huge Oven Fresh Pizza Showcase" 
-                  class="w-full h-full object-cover animate-float hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent"></div>
-                
-                <!-- Floating Rating Overlay -->
-                <div class="absolute top-4 left-4 bg-zinc-950/90 backdrop-blur-md border border-red-500/40 p-3 rounded-2xl shadow-2xl flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg font-black">
-                    <i class="fa-solid fa-fire"></i>
-                  </div>
-                  <div>
-                    <span class="block text-xs font-extrabold text-white">#1 Hot Seller</span>
-                    <span class="block text-[10px] text-zinc-400">100% Fresh Dough</span>
-                  </div>
-                </div>
+        <!-- Right Rotating Pizza & Floating Badges -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Pulsing Red/Yellow Glow -->
+            <div class="absolute -inset-4 bg-gradient-to-r from-red-600/40 to-amber-500/30 rounded-full blur-3xl opacity-60 animate-pulse-glow"></div>
 
-                <!-- Floating WhatsApp Instant Order Badge -->
-                <div class="absolute top-4 right-4 bg-emerald-950/90 backdrop-blur-md border border-emerald-500/40 p-3 rounded-2xl shadow-2xl flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-black">
-                    <i class="fa-brands fa-whatsapp"></i>
-                  </div>
-                  <div>
-                    <span class="block text-xs font-extrabold text-white">Direct WhatsApp Order</span>
-                    <span class="block text-[10px] text-emerald-400">Fast Confirmation</span>
-                  </div>
-                </div>
+            <!-- Main Rotating Pizza Visual -->
+            <div class="relative z-10 text-center">
+              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=80" 
+                alt="Pizzon Handmade Pizza" 
+                class="w-72 sm:w-96 lg:w-[460px] h-72 sm:h-96 lg:h-[460px] object-cover rounded-full mx-auto border-4 border-red-600/40 shadow-2xl rotate-on-hover">
+            </div>
 
-                <!-- Bottom Floating Pizza Tag -->
-                <div class="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md border border-red-500/30 p-3.5 rounded-xl flex items-center justify-between gap-3">
-                  <div class="min-w-0">
-                    <span class="block text-[10px] sm:text-xs text-red-400 font-bold uppercase tracking-wider">Chef Special Combo</span>
-                    <h3 class="text-xs sm:text-sm font-bold text-white truncate">Specialty Oven Baked Crust</h3>
-                  </div>
-                  <button class="cart-trigger bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-md transition-all flex-shrink-0 flex items-center gap-1.5">
-                    <i class="fa-solid fa-cart-plus"></i> Order Now
-                  </button>
-                </div>
+            <!-- Rotating Buy 1 Get 1 Badge -->
+            <div class="absolute -top-4 -right-4 sm:top-2 sm:right-2 z-20 w-24 sm:w-32 h-24 sm:h-32 rounded-full bg-amber-500 text-zinc-950 p-2 shadow-2xl flex items-center justify-center text-center animate-spin-slow">
+              <div class="border-2 border-dashed border-zinc-950 w-full h-full rounded-full flex flex-col items-center justify-center">
+                <span class="text-[10px] sm:text-xs font-black uppercase">Buy 1 Get 1</span>
+                <span class="text-xs sm:text-sm font-extrabold">FREE</span>
+              </div>
+            </div>
+
+            <!-- Floating Leaf Accent -->
+            <div class="absolute bottom-4 left-2 z-20 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3 animate-float">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-base font-bold">
+                🌱
+              </div>
+              <div class="text-left">
+                <span class="block text-xs font-bold text-white">100% Organic</span>
+                <span class="block text-[10px] text-zinc-400">Fresh Ingredients</span>
               </div>
             </div>
           </div>
@@ -274,51 +188,26 @@
 
 
   <!-- ==========================================
-       3. TRUST / HIGHLIGHTS BAR
+       3. DAILY FRESH SECTION
   ========================================== -->
-  <section id="highlights" class="py-10 sm:py-12 bg-zinc-950 border-y border-red-900/30">
+  <section class="py-16 sm:py-20 bg-zinc-900 border-y border-zinc-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div class="bg-gradient-to-r from-red-950/80 via-zinc-900 to-zinc-950 border border-red-600/30 rounded-3xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-8 red-glow">
         
-        <div class="p-4 sm:p-5 rounded-2xl bg-zinc-900/80 border border-red-500/20 flex items-center gap-4">
-          <div class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl flex-shrink-0">
-            <i class="fa-solid fa-star"></i>
+        <div class="flex items-center gap-5">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-red-600 text-white flex items-center justify-center text-3xl sm:text-4xl font-bold red-glow flex-shrink-0">
+            <i class="fa-solid fa-fire-flame-curved"></i>
           </div>
           <div>
-            <span class="block text-xl sm:text-2xl font-black text-white font-heading">4.9 / 5.0</span>
-            <span class="text-xs text-zinc-400 font-medium">Customer Satisfaction</span>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-400">Baked Daily</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1">Daily Fresh and Always Tasty</h2>
+            <p class="text-zinc-400 text-xs sm:text-sm mt-1 max-w-xl">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
           </div>
         </div>
 
-        <div class="p-4 sm:p-5 rounded-2xl bg-zinc-900/80 border border-red-500/20 flex items-center gap-4">
-          <div class="w-11 h-11 rounded-xl bg-red-600/15 text-red-500 flex items-center justify-center text-xl flex-shrink-0">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
-          <div>
-            <span class="block text-sm font-bold text-white">Prime Location</span>
-            <span class="text-xs text-zinc-400 font-medium">Your City Outlet</span>
-          </div>
-        </div>
-
-        <div class="p-4 sm:p-5 rounded-2xl bg-zinc-900/80 border border-red-500/20 flex items-center gap-4">
-          <div class="w-11 h-11 rounded-xl bg-red-600/15 text-red-500 flex items-center justify-center text-xl flex-shrink-0">
-            <i class="fa-solid fa-truck-fast"></i>
-          </div>
-          <div>
-            <span class="block text-sm font-bold text-white">3 Service Options</span>
-            <span class="text-xs text-zinc-400 font-medium">Dine-in • Takeout • Delivery</span>
-          </div>
-        </div>
-
-        <div class="p-4 sm:p-5 rounded-2xl bg-zinc-900/80 border border-red-500/20 flex items-center gap-4">
-          <div class="w-11 h-11 rounded-xl bg-red-600/15 text-red-500 flex items-center justify-center text-xl flex-shrink-0">
-            <i class="fa-solid fa-phone-volume"></i>
-          </div>
-          <div>
-            <span class="block text-sm font-bold text-white">+92 3XX XXXXXXX</span>
-            <span class="block text-xs text-zinc-400 font-medium">Direct Hotline</span>
-          </div>
-        </div>
+        <button class="cart-drawer-trigger bg-amber-500 hover:bg-amber-600 text-zinc-950 font-black px-7 py-3.5 rounded-2xl shadow-xl text-xs sm:text-sm flex items-center gap-2 whitespace-nowrap flex-shrink-0 transition-transform hover:scale-105">
+          <i class="fa-solid fa-basket-shopping"></i> Order Fresh Now
+        </button>
 
       </div>
     </div>
@@ -326,133 +215,18 @@
 
 
   <!-- ==========================================
-       4. REPLACED SECTION: PROMOTIONAL DEALS & OFFERS
+       4. OUR MENU (POPULAR DISHES)
   ========================================== -->
-  <section id="deals" class="py-16 sm:py-20 bg-zinc-950 relative">
+  <section id="menu" class="py-20 bg-zinc-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
-      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-red-500 bg-red-500/10 border border-red-500/20 px-3.5 py-1.5 rounded-full">Exclusive Promotions</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-3 font-heading">Hot Special <span class="text-red-500">Deals & Combos</span></h2>
-        <p class="text-zinc-400 text-xs sm:text-base mt-2">Save big on our specially curated combo meals designed for solo quick bites, couples, and family feasts.</p>
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-amber-400 font-script text-2xl block">Popular Dishes</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-1 font-heading">Browse Our <span class="text-red-500">Menu</span></h2>
       </div>
 
-      <!-- Deals Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-        
-        <!-- Deal 1 -->
-        <div class="relative bg-gradient-to-br from-zinc-900 to-zinc-950 border border-red-500/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover-lift overflow-hidden red-border-glow">
-          <div class="absolute -right-12 -top-12 w-40 h-40 bg-red-600/15 rounded-full blur-2xl"></div>
-          
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="bg-red-600 text-white text-[10px] sm:text-xs font-black uppercase px-3 py-1 rounded-full tracking-wider shadow-md">Best Value Solo</span>
-              <span class="text-xl sm:text-2xl font-black text-amber-400 font-heading">Rs. 950</span>
-            </div>
-
-            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Solo Meal Combo</h3>
-            <p class="text-zinc-400 text-xs sm:text-sm mb-6 leading-relaxed">The ultimate single meal combo! Pick your favorite Small Pizza flavor paired with cheesy garlic breadsticks and a cold beverage.</p>
-
-            <ul class="space-y-2.5 mb-8">
-              <li class="flex items-center gap-2.5 text-xs sm:text-sm text-zinc-200">
-                <i class="fa-solid fa-circle-check text-red-500 text-sm"></i> 1 Small Pizza (Any Signature Crust)
-              </li>
-              <li class="flex items-center gap-2.5 text-xs sm:text-sm text-zinc-200">
-                <i class="fa-solid fa-circle-check text-red-500 text-sm"></i> 1 Cheesy Loaded Garlic Bread Portion
-              </li>
-              <li class="flex items-center gap-2.5 text-xs sm:text-sm text-zinc-200">
-                <i class="fa-solid fa-circle-check text-red-500 text-sm"></i> 1 Chilled Soft Drink
-              </li>
-            </ul>
-          </div>
-
-          <button onclick="addToCart('d1')" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl shadow-lg red-glow flex items-center justify-center gap-2 text-xs sm:text-sm transition-all">
-            <i class="fa-solid fa-cart-plus"></i> Order Solo Combo
-          </button>
-        </div>
-
-        <!-- Deal 2 -->
-        <div class="relative bg-gradient-to-br from-zinc-900 to-zinc-950 border border-amber-500/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover-lift overflow-hidden">
-          <div class="absolute -right-12 -top-12 w-40 h-40 bg-amber-500/10 rounded-full blur-2xl"></div>
-
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="bg-amber-500 text-zinc-950 text-[10px] sm:text-xs font-black uppercase px-3 py-1 rounded-full tracking-wider shadow-md">Family Mega Feast</span>
-              <span class="text-xl sm:text-2xl font-black text-amber-400 font-heading">Rs. 3,390</span>
-            </div>
-
-            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Mega Family Pizza Bundle</h3>
-            <p class="text-zinc-400 text-xs sm:text-sm mb-6 leading-relaxed">Feast like royalty with friends and family! Includes 2 Large pizzas, 6 hot buffalo wings, and a 1.5L soft drink.</p>
-
-            <ul class="space-y-2.5 mb-8">
-              <li class="flex items-center gap-2.5 text-xs sm:text-sm text-zinc-200">
-                <i class="fa-solid fa-circle-check text-amber-500 text-sm"></i> 2 Large Pizzas (Any Signature Flavors)
-              </li>
-              <li class="flex items-center gap-2.5 text-xs sm:text-sm text-zinc-200">
-                <i class="fa-solid fa-circle-check text-amber-500 text-sm"></i> 6 Pcs Hot Buffalo Wings
-              </li>
-              <li class="flex items-center gap-2.5 text-xs sm:text-sm text-zinc-200">
-                <i class="fa-solid fa-circle-check text-amber-500 text-sm"></i> 1.5L Chilled Soft Drink Bottle
-              </li>
-            </ul>
-          </div>
-
-          <button onclick="addToCart('d2')" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-zinc-950 font-black py-3.5 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs sm:text-sm transition-all">
-            <i class="fa-solid fa-cart-plus"></i> Order Family Bundle
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==========================================
-       5. REPLACED SECTION: INTERACTIVE MENU CATALOG
-  ========================================== -->
-  <section id="menu" class="py-16 sm:py-20 bg-zinc-900 border-t border-red-900/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header & Search -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
-        <div>
-          <span class="text-xs font-extrabold uppercase tracking-widest text-red-500">Freshly Baked & Prepared</span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1 font-heading">Explore Our <span class="text-red-500">Menu</span></h2>
-        </div>
-
-        <!-- Search Bar -->
-        <div class="relative w-full md:w-72">
-          <input type="text" id="menu-search" placeholder="Search menu items..." 
-            class="w-full bg-zinc-950 border border-zinc-700 focus:border-red-500 rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-zinc-500 focus:outline-none transition-colors pl-10">
-          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-500 text-sm"></i>
-        </div>
-      </div>
-
-      <!-- Category Filter Tabs -->
-      <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 sm:mb-10 no-scrollbar">
-        <button class="category-tab bg-red-600 text-white font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap shadow-md" data-category="all">
-          <i class="fa-solid fa-utensils"></i> All Items
-        </button>
-        <button class="category-tab bg-zinc-800 text-zinc-300 hover:bg-zinc-700 font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap" data-category="pizzas">
-          <i class="fa-solid fa-pizza-slice"></i> Specialty Pizzas
-        </button>
-        <button class="category-tab bg-zinc-800 text-zinc-300 hover:bg-zinc-700 font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap" data-category="burgers">
-          <i class="fa-solid fa-burger"></i> Gourmet Burgers
-        </button>
-        <button class="category-tab bg-zinc-800 text-zinc-300 hover:bg-zinc-700 font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap" data-category="sides">
-          <i class="fa-solid fa-fire"></i> Sides & Wings
-        </button>
-        <button class="category-tab bg-zinc-800 text-zinc-300 hover:bg-zinc-700 font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap" data-category="deals">
-          <i class="fa-solid fa-tags"></i> Special Deals
-        </button>
-        <button class="category-tab bg-zinc-800 text-zinc-300 hover:bg-zinc-700 font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap" data-category="drinks">
-          <i class="fa-solid fa-bottle-water"></i> Drinks & Desserts
-        </button>
-      </div>
-
-      <!-- Menu Dynamic Grid -->
-      <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      <!-- Menu Grid -->
+      <div id="pizzon-menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <!-- Rendered by app.js -->
       </div>
 
@@ -461,60 +235,38 @@
 
 
   <!-- ==========================================
-       6. ABOUT THE RESTAURANT
+       5. OUR STORY SECTION
   ========================================== -->
-  <section id="about" class="py-16 sm:py-20 bg-zinc-950 border-t border-red-900/30 relative">
+  <section id="story" class="py-20 bg-zinc-900 border-t border-zinc-800 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Left Image Grid -->
-        <div class="lg:col-span-6 grid grid-cols-2 gap-3 sm:gap-4">
-          <div class="space-y-3 sm:space-y-4">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" 
-              alt="Oven Fresh Baking" class="rounded-2xl object-cover h-40 sm:h-48 w-full border border-red-900/30 shadow-lg">
-            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80" 
-              alt="Delicious Pizza Slice" class="rounded-2xl object-cover h-52 sm:h-64 w-full border border-red-900/30 shadow-lg">
-          </div>
-          <div class="space-y-3 sm:space-y-4 pt-6 sm:pt-8">
-            <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=600&q=80" 
-              alt="Kitchen Prep" class="rounded-2xl object-cover h-52 sm:h-64 w-full border border-red-900/30 shadow-lg">
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" 
-              alt="Gourmet Burger" class="rounded-2xl object-cover h-40 sm:h-48 w-full border border-red-900/30 shadow-lg">
+        <!-- Left Image -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-3xl overflow-hidden border-2 border-red-600/30 p-2 bg-zinc-950 shadow-2xl red-border-glow">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" 
+              alt="Our Story Pizzon" class="w-full h-80 sm:h-96 lg:h-[420px] object-cover rounded-2xl">
           </div>
         </div>
 
-        <!-- Right About Text -->
-        <div class="lg:col-span-6 space-y-5 sm:space-y-6">
-          <span class="text-xs font-extrabold uppercase tracking-widest text-red-500">About Our Restaurant</span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-heading leading-tight">
-            Crafting Outstanding Taste & <span class="text-red-500">Fresh Flavors</span>
+        <!-- Right Content -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-amber-400 font-script text-2xl block">Our Story</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-heading leading-tight">
+            The Pizzon Has Excellent Of <span class="text-red-500">Quality Foods</span>
           </h2>
 
-          <p class="text-zinc-300 text-xs sm:text-base leading-relaxed">
-            Welcome to <strong class="text-white">[YOUR RESTAURANT NAME]</strong>. We are dedicated to serving hot, flavorful pizzas made with rich cheese, savory homemade sauces, and premium toppings.
+          <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
           </p>
 
           <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">
-            Whether you are dining in with family, picking up a quick takeaway order, or ordering delivery to your doorstep, our goal is to deliver top quality and unforgettable taste every single time.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
           </p>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <div class="p-4 rounded-xl bg-zinc-900 border border-red-500/20">
-              <i class="fa-solid fa-map-pin text-red-500 text-xl mb-2"></i>
-              <h4 class="text-sm font-bold text-white">Prime Location</h4>
-              <p class="text-xs text-zinc-400 mt-1">Your Street Address, Block #, City</p>
-            </div>
-
-            <div class="p-4 rounded-xl bg-zinc-900 border border-red-500/20">
-              <i class="fa-solid fa-star text-amber-400 text-xl mb-2"></i>
-              <h4 class="text-sm font-bold text-white">4.9 ★ Rating</h4>
-              <p class="text-xs text-zinc-400 mt-1">Loved by local foodies</p>
-            </div>
-          </div>
 
           <div class="pt-2">
-            <a href="tel:+923000000000" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-red-950/70 hover:bg-red-900 text-white font-bold px-6 py-3.5 rounded-xl border border-red-500/40 transition-colors text-xs sm:text-sm">
-              <i class="fa-solid fa-phone text-red-500"></i> Call Us: +92 3XX XXXXXXX
+            <a href="#menu" class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-7 py-3.5 rounded-2xl shadow-lg text-sm transition-all hover:scale-105">
+              Read More <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>
@@ -525,48 +277,52 @@
 
 
   <!-- ==========================================
-       7. WHY CHOOSE US
+       6. OUR STRENGTH ("WHY WE ARE THE BEST?")
   ========================================== -->
-  <section id="why-us" class="py-16 sm:py-20 bg-zinc-900 border-t border-red-900/30">
+  <section id="strength" class="py-20 dark-strength-bg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-red-500">Quality Commitment</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1 font-heading">Why Customers <span class="text-red-500">Choose Us</span></h2>
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-amber-400 font-script text-2xl block">Our Strength</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-1 font-heading">Why We Are <span class="text-red-500">The Best?</span></h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="p-5 sm:p-6 rounded-2xl bg-zinc-950 border border-red-900/20 hover-lift">
-          <div class="w-11 h-11 rounded-xl bg-red-600/15 text-red-500 flex items-center justify-center text-xl mb-4 font-bold">
-            <i class="fa-solid fa-fire-burner"></i>
+        <!-- Strength 1 -->
+        <div class="p-6 rounded-3xl bg-zinc-900 border border-amber-500/30 text-center hover-lift">
+          <div class="w-16 h-16 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
+            <i class="fa-solid fa-utensils"></i>
           </div>
-          <h3 class="text-base sm:text-lg font-bold text-white mb-2">Freshly Prepared</h3>
-          <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Baked fresh to order using quality mozzarella, rich pizza sauce, and premium toppings.</p>
+          <h3 class="text-lg font-bold text-white mb-2">All kinds of Foods</h3>
+          <p class="text-zinc-400 text-xs leading-relaxed">Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
         </div>
 
-        <div class="p-5 sm:p-6 rounded-2xl bg-zinc-950 border border-red-900/20 hover-lift">
-          <div class="w-11 h-11 rounded-xl bg-red-600/15 text-red-500 flex items-center justify-center text-xl mb-4 font-bold">
-            <i class="fa-solid fa-bolt"></i>
+        <!-- Strength 2 -->
+        <div class="p-6 rounded-3xl bg-zinc-900 border border-red-600/30 text-center hover-lift">
+          <div class="w-16 h-16 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
+            <i class="fa-solid fa-leaf"></i>
           </div>
-          <h3 class="text-base sm:text-lg font-bold text-white mb-2">Fast Express Delivery</h3>
-          <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Hot delivery straight to your doorstep across your city with real-time updates.</p>
+          <h3 class="text-lg font-bold text-white mb-2">Fresh Foods</h3>
+          <p class="text-zinc-400 text-xs leading-relaxed">Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
         </div>
 
-        <div class="p-5 sm:p-6 rounded-2xl bg-zinc-950 border border-red-900/20 hover-lift">
-          <div class="w-11 h-11 rounded-xl bg-red-600/15 text-red-500 flex items-center justify-center text-xl mb-4 font-bold">
-            <i class="fa-solid fa-store"></i>
+        <!-- Strength 3 -->
+        <div class="p-6 rounded-3xl bg-zinc-900 border border-amber-500/30 text-center hover-lift">
+          <div class="w-16 h-16 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
+            <i class="fa-solid fa-heart"></i>
           </div>
-          <h3 class="text-base sm:text-lg font-bold text-white mb-2">Dine-In & Takeout</h3>
-          <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Enjoy comfortable dine-in seating or fast takeout pickup at our main branch.</p>
+          <h3 class="text-lg font-bold text-white mb-2">Best Taste</h3>
+          <p class="text-zinc-400 text-xs leading-relaxed">Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
         </div>
 
-        <div class="p-5 sm:p-6 rounded-2xl bg-zinc-950 border border-red-900/20 hover-lift">
-          <div class="w-11 h-11 rounded-xl bg-red-600/15 text-red-500 flex items-center justify-center text-xl mb-4 font-bold">
-            <i class="fa-solid fa-thumbs-up"></i>
+        <!-- Strength 4 -->
+        <div class="p-6 rounded-3xl bg-zinc-900 border border-red-600/30 text-center hover-lift">
+          <div class="w-16 h-16 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
+            <i class="fa-solid fa-motorcycle"></i>
           </div>
-          <h3 class="text-base sm:text-lg font-bold text-white mb-2">Verified 4.9★ Taste</h3>
-          <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Highly rated by food enthusiasts for awesome taste, friendly service & great atmosphere.</p>
+          <h3 class="text-lg font-bold text-white mb-2">On Time Delivery</h3>
+          <p class="text-zinc-400 text-xs leading-relaxed">Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
         </div>
 
       </div>
@@ -575,141 +331,92 @@
 
 
   <!-- ==========================================
-       8. GALLERY / FOOD SHOWCASE
+       7. CLIENT TESTIMONIALS (FEEDBACK)
   ========================================== -->
-  <section class="py-16 sm:py-20 bg-zinc-950 border-t border-red-900/30">
+  <section id="testimonials" class="py-20 bg-zinc-950 border-t border-zinc-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-red-500">Visual Showcase</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1 font-heading">Food & Ambiance <span class="text-red-500">Gallery</span></h2>
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-amber-400 font-script text-2xl block">Customer Feedback</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-1 font-heading">Client <span class="text-red-500">Testimonials</span></h2>
       </div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-        <div class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden bg-zinc-900 border border-red-900/30">
-          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Signature Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3 sm:p-4">
-            <span class="text-xs font-bold text-white">Signature Baked Pizza</span>
-          </div>
-        </div>
-
-        <div class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden bg-zinc-900 border border-red-900/30">
-          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80" alt="Cheesy Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3 sm:p-4">
-            <span class="text-xs font-bold text-white">Chicken Tikka Feast</span>
-          </div>
-        </div>
-
-        <div class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden bg-zinc-900 border border-red-900/30">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Zinger Burger" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3 sm:p-4">
-            <span class="text-xs font-bold text-white">Crispy Zinger Burger</span>
-          </div>
-        </div>
-
-        <div class="group relative h-48 sm:h-60 rounded-2xl overflow-hidden bg-zinc-900 border border-red-900/30">
-          <img src="https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?auto=format&fit=crop&w=600&q=80" alt="Garlic Breadsticks" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3 sm:p-4">
-            <span class="text-xs font-bold text-white">Cheesy Garlic Breadsticks</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ==========================================
-       9. CUSTOMER REVIEWS
-  ========================================== -->
-  <section id="reviews" class="py-16 sm:py-20 bg-zinc-900 border-t border-red-900/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
-        <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 px-3.5 py-1.5 rounded-full mb-3">
-          <span class="text-amber-400 font-extrabold text-xs">⭐ 4.9 out of 5.0</span>
-          <span class="text-zinc-500 text-xs">•</span>
-          <span class="text-zinc-300 text-xs font-semibold">100+ Verified Reviews</span>
-        </div>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-heading">What Customers <span class="text-red-500">Say</span></h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-3 gap-6">
         
-        <!-- Review 1 -->
-        <div class="p-5 sm:p-6 rounded-2xl bg-zinc-950 border border-red-900/20 flex flex-col justify-between hover-lift">
+        <!-- Feedback 1 -->
+        <div class="p-6 rounded-3xl bg-zinc-900 border border-zinc-800 hover-lift flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-amber-400 text-xs sm:text-sm mb-4">
+            <div class="flex items-center gap-1 text-amber-400 text-xs mb-4">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-zinc-200 text-xs sm:text-sm italic leading-relaxed mb-6">
-              "Awesome food quality, super fast delivery, and fantastic customer service!"
+            <p class="text-zinc-300 text-xs sm:text-sm italic leading-relaxed mb-6">
+              “Lorem Ipsum is simply dummy text of the print book. It has survived not only five centuries, but also the leap into electronic typesetting.”
             </p>
           </div>
 
-          <div class="flex items-center gap-3 pt-4 border-t border-zinc-900">
-            <div class="w-10 h-10 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-xs sm:text-sm">
-              AH
+          <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+            <div class="w-10 h-10 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm">
+              JD
             </div>
             <div>
-              <h4 class="text-xs sm:text-sm font-bold text-white">Ali Hassan</h4>
-              <span class="text-[11px] text-zinc-400 block">Verified Delivery Customer</span>
+              <h4 class="text-sm font-bold text-white">Johan Doe</h4>
+              <span class="text-[11px] text-zinc-400 block">Satisfied Client</span>
             </div>
           </div>
         </div>
 
-        <!-- Review 2 -->
-        <div class="p-5 sm:p-6 rounded-2xl bg-zinc-950 border border-red-900/20 flex flex-col justify-between hover-lift">
+        <!-- Feedback 2 -->
+        <div class="p-6 rounded-3xl bg-zinc-900 border border-zinc-800 hover-lift flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-amber-400 text-xs sm:text-sm mb-4">
+            <div class="flex items-center gap-1 text-amber-400 text-xs mb-4">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-zinc-200 text-xs sm:text-sm italic leading-relaxed mb-6">
-              "The crust is crisp, cheese is overflowing, and WhatsApp ordering is super convenient."
+            <p class="text-zinc-300 text-xs sm:text-sm italic leading-relaxed mb-6">
+              “Lorem Ipsum is simply dummy text of the print book. Exceptional flavor and fast delivery right to our door!”
             </p>
           </div>
 
-          <div class="flex items-center gap-3 pt-4 border-t border-zinc-900">
-            <div class="w-10 h-10 rounded-full bg-zinc-800 text-red-500 font-bold flex items-center justify-center text-xs sm:text-sm">
-              SK
+          <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+            <div class="w-10 h-10 rounded-full bg-amber-500 text-zinc-950 font-bold flex items-center justify-center text-sm">
+              AS
             </div>
             <div>
-              <h4 class="text-xs sm:text-sm font-bold text-white">Saad Khan</h4>
-              <span class="text-[11px] text-zinc-400 block">Local Guide • Regular Visitor</span>
+              <h4 class="text-sm font-bold text-white">Alex Saanu</h4>
+              <span class="text-[11px] text-zinc-400 block">Food Critic</span>
             </div>
           </div>
         </div>
 
-        <!-- Review 3 -->
-        <div class="p-5 sm:p-6 rounded-2xl bg-zinc-950 border border-red-900/20 flex flex-col justify-between hover-lift">
+        <!-- Feedback 3 -->
+        <div class="p-6 rounded-3xl bg-zinc-900 border border-zinc-800 hover-lift flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-amber-400 text-xs sm:text-sm mb-4">
+            <div class="flex items-center gap-1 text-amber-400 text-xs mb-4">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-zinc-200 text-xs sm:text-sm italic leading-relaxed mb-6">
-              "Great family deals and prompt support on WhatsApp orders!"
+            <p class="text-zinc-300 text-xs sm:text-sm italic leading-relaxed mb-6">
+              “Pizzon never disappoints. The crust is crispy and toppings are always super fresh.”
             </p>
           </div>
 
-          <div class="flex items-center gap-3 pt-4 border-t border-zinc-900">
-            <div class="w-10 h-10 rounded-full bg-zinc-800 text-amber-400 font-bold flex items-center justify-center text-xs sm:text-sm">
-              ZM
+          <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+            <div class="w-10 h-10 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm">
+              JL
             </div>
             <div>
-              <h4 class="text-xs sm:text-sm font-bold text-white">Zainab Malik</h4>
-              <span class="text-[11px] text-zinc-400 block">Dine-In Customer</span>
+              <h4 class="text-sm font-bold text-white">Jona Leoner</h4>
+              <span class="text-[11px] text-zinc-400 block">Regular Guest</span>
             </div>
           </div>
         </div>
@@ -720,89 +427,45 @@
 
 
   <!-- ==========================================
-       10. LOCATION + CONTACT
+       8. RESERVATION SECTION ("BOOK A TABLE NOW!")
   ========================================== -->
-  <section id="contact" class="py-16 sm:py-20 bg-zinc-950 border-t border-red-900/30">
+  <section id="reservation" class="py-20 bg-zinc-900 border-t border-zinc-800 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Contact Info Card -->
-        <div class="lg:col-span-6 space-y-5 sm:space-y-6">
-          <span class="text-xs font-extrabold uppercase tracking-widest text-red-500">Visit or Call Us</span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-heading">Find Us & <span class="text-red-500">Order Direct</span></h2>
+        <!-- Booking Form -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-amber-400 font-script text-2xl block">Reservation</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-heading">Book A Table <span class="text-red-500">Now!</span></h2>
           
-          <p class="text-zinc-400 text-xs sm:text-base leading-relaxed">
-            Visit our outlet or order online directly for express takeout & delivery!
-          </p>
-
-          <div class="space-y-3.5">
-            <!-- Address Card -->
-            <div class="p-4 rounded-xl bg-zinc-900 border border-red-500/20 flex items-start gap-4">
-              <div class="w-10 h-10 rounded-lg bg-red-600/15 text-red-500 flex items-center justify-center text-lg flex-shrink-0 mt-1">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div>
-                <h4 class="text-xs sm:text-sm font-bold text-white">Restaurant Location</h4>
-                <p class="text-xs text-zinc-300 mt-1 leading-relaxed">
-                  [Your Restaurant Address, Street #, Unit #, City, Country]
-                </p>
-              </div>
+          <form id="reservation-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input type="text" id="res-name" placeholder="Name*" required class="w-full bg-zinc-950 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
+              <input type="email" placeholder="Email*" required class="w-full bg-zinc-950 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
             </div>
 
-            <!-- Phone Card -->
-            <div class="p-4 rounded-xl bg-zinc-900 border border-red-500/20 flex items-center gap-4">
-              <div class="w-10 h-10 rounded-lg bg-red-600/15 text-red-500 flex items-center justify-center text-lg flex-shrink-0">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              <div class="flex-1">
-                <h4 class="text-xs sm:text-sm font-bold text-white">Direct Phone Line</h4>
-                <a href="tel:+923000000000" class="text-sm sm:text-base font-extrabold text-red-500 hover:underline">
-                  +92 3XX XXXXXXX
-                </a>
-              </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input type="tel" placeholder="Phone*" required class="w-full bg-zinc-950 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
+              <input type="text" placeholder="Time*" required class="w-full bg-zinc-950 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
             </div>
 
-            <!-- Services Available -->
-            <div class="p-4 rounded-xl bg-zinc-900 border border-red-500/20 flex flex-wrap items-center justify-between gap-2">
-              <span class="text-xs font-bold text-zinc-300">Fulfillment Options:</span>
-              <div class="flex gap-1.5 sm:gap-2">
-                <span class="bg-red-600/20 text-red-400 text-xs font-bold px-2.5 py-1 rounded-md border border-red-500/30">Dine-in</span>
-                <span class="bg-red-600/20 text-red-400 text-xs font-bold px-2.5 py-1 rounded-md border border-red-500/30">Takeout</span>
-                <span class="bg-red-600/20 text-red-400 text-xs font-bold px-2.5 py-1 rounded-md border border-red-500/30">Delivery</span>
-              </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input type="date" required class="w-full bg-zinc-950 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-zinc-300 focus:outline-none">
+              <input type="number" placeholder="Guest (Persons)*" min="1" max="20" required class="w-full bg-zinc-950 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
             </div>
-          </div>
 
-          <!-- Buttons -->
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-            <a href="tel:+923000000000" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg red-glow text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
-              <i class="fa-solid fa-phone"></i> Call Now (+92 3XX XXXXXXX)
-            </a>
-            
-            <a href="https://maps.google.com/" target="_blank" class="bg-zinc-900 hover:bg-zinc-800 text-zinc-200 font-bold px-6 py-3.5 rounded-xl border border-zinc-700 text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
-              <i class="fa-solid fa-map-location-dot"></i> Directions on Google Maps
-            </a>
-          </div>
-
+            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-2xl shadow-xl red-glow text-sm transition-all active:scale-95">
+              Book Now
+            </button>
+          </form>
         </div>
 
-        <!-- Google Map Card Frame -->
-        <div class="lg:col-span-6">
-          <div class="relative bg-zinc-900 border border-red-500/30 rounded-3xl p-3 sm:p-4 shadow-2xl red-border-glow">
-            <div class="h-72 sm:h-96 rounded-2xl overflow-hidden relative">
-              <iframe 
-                title="Restaurant Map Placeholder"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.214!2d68.361!3d25.372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDIyJzE5LjIiTiA2OMKwMjEnMzkuNiJF!5e0!3m2!1sen!2spk!4v1650000000000"
-                class="w-full h-full border-0 grayscale opacity-85 hover:grayscale-0 hover:opacity-100 transition-all duration-300" 
-                allowfullscreen="" 
-                loading="lazy">
-              </iframe>
-              <div class="absolute bottom-3 left-3 right-3 bg-zinc-950/90 backdrop-blur-md border border-red-500/30 p-2.5 rounded-xl flex items-center justify-between text-xs text-white">
-                <span class="font-bold truncate"><i class="fa-solid fa-pizza-slice text-red-500 mr-1.5"></i> [YOUR RESTAURANT NAME]</span>
-                <span class="text-zinc-400 flex-shrink-0">Main Outlet</span>
-              </div>
-            </div>
+        <!-- Pizza Illustration Visual -->
+        <div class="lg:col-span-6 text-center relative">
+          <div class="relative mx-auto max-w-md">
+            <div class="absolute -inset-4 bg-red-600/20 rounded-full blur-3xl opacity-50"></div>
+            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" 
+              alt="Reservation Pizza" class="relative z-10 w-80 h-80 sm:w-96 sm:h-96 object-cover rounded-full mx-auto border-4 border-red-600/40 shadow-2xl">
           </div>
         </div>
 
@@ -812,196 +475,202 @@
 
 
   <!-- ==========================================
-       11. FINAL CTA BANNER
+       9. FROM OUR BLOG
   ========================================== -->
-  <section class="py-14 sm:py-20 bg-gradient-to-r from-red-800 via-red-600 to-red-900 relative overflow-hidden red-glow-lg">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.18),transparent_70%)]"></div>
-    
-    <div class="max-w-5xl mx-auto px-4 text-center relative z-10 space-y-5 sm:space-y-6">
-      <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight font-heading leading-tight">
-        Ready to Boost Your Restaurant Sales?
-      </h2>
-      <p class="text-red-100 text-xs sm:text-base lg:text-lg max-w-2xl mx-auto font-medium">
-        Order online directly today. Fast delivery and instant confirmation straight to your WhatsApp!
-      </p>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
-        <a href="tel:+923000000000" class="w-full sm:w-auto bg-zinc-950 hover:bg-zinc-900 text-white font-black px-8 py-4 rounded-xl shadow-2xl text-xs sm:text-base flex items-center justify-center gap-3 transition-transform hover:scale-105 active:scale-95 border border-red-500/40">
-          <i class="fa-solid fa-phone text-red-500"></i> Call +92 3XX XXXXXXX Now
-        </a>
-
-        <button class="cart-trigger w-full sm:w-auto bg-white hover:bg-zinc-100 text-red-700 font-black px-8 py-4 rounded-xl shadow-xl text-xs sm:text-base flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95">
-          <i class="fa-solid fa-cart-shopping"></i> Test Online Order
-        </button>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==========================================
-       12. FOOTER
-  ========================================== -->
-  <footer class="bg-zinc-950 border-t border-red-900/30 text-zinc-400 py-12 sm:py-14">
+  <section id="blog" class="py-20 bg-zinc-950 border-t border-zinc-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-10 sm:mb-12">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-amber-400 font-script text-2xl block">From Our Blog</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-1 font-heading">Our Latest <span class="text-red-500">News</span></h2>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
         
-        <!-- Column 1: Brand -->
-        <div class="space-y-3.5">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-lg bg-red-600 flex items-center justify-center text-white text-base font-bold red-glow">
-              <i class="fa-solid fa-pizza-slice"></i>
+        <!-- Big Featured Article -->
+        <div class="lg:col-span-6 bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover-lift">
+          <div class="h-64 sm:h-72 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Blog Main" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">07 Mar 2022</span>
+            <h3 class="text-xl font-bold text-white mt-2 mb-4 hover:text-red-500 transition-colors">
+              How to keep fear from ruining your pizza art business with confidence
+            </h3>
+            <div class="flex items-center justify-between pt-4 border-t border-zinc-800">
+              <span class="text-xs text-zinc-400">By David Milar • London, UK</span>
+              <a href="#blog" class="text-xs font-bold text-red-500 flex items-center gap-1 hover:underline">
+                Read More <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
-            <span class="text-xl font-bold text-white font-heading">[YOUR BRAND]</span>
-          </div>
-          <p class="text-xs leading-relaxed text-zinc-400">
-            Your destination for fresh pizzas, gourmet burgers, garlic breadsticks, and combo deals.
-          </p>
-          <div class="flex items-center gap-2 text-xs text-amber-400 font-bold">
-            <i class="fa-solid fa-star"></i> 4.9 (100+ Verified Reviews)
           </div>
         </div>
 
-        <!-- Column 2: Quick Links -->
+        <!-- Small Articles List -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="p-4 bg-zinc-900 rounded-2xl border border-zinc-800 flex gap-4 items-center hover-lift">
+            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=300&q=80" alt="Blog Thumb" class="w-24 h-24 rounded-xl object-cover flex-shrink-0">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase">07 Mar 2022</span>
+              <h4 class="text-sm font-bold text-white mt-1 mb-2 hover:text-red-500 transition-colors">Secrets behind our 100% fresh handmade dough recipe</h4>
+              <a href="#blog" class="text-xs font-bold text-red-500">Read More →</a>
+            </div>
+          </div>
+
+          <div class="p-4 bg-zinc-900 rounded-2xl border border-zinc-800 flex gap-4 items-center hover-lift">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80" alt="Blog Thumb" class="w-24 h-24 rounded-xl object-cover flex-shrink-0">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase">05 Mar 2022</span>
+              <h4 class="text-sm font-bold text-white mt-1 mb-2 hover:text-red-500 transition-colors">Top 5 pizza sauce combinations you must try this season</h4>
+              <a href="#blog" class="text-xs font-bold text-red-500">Read More →</a>
+            </div>
+          </div>
+
+          <div class="p-4 bg-zinc-900 rounded-2xl border border-zinc-800 flex gap-4 items-center hover-lift">
+            <img src="https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?auto=format&fit=crop&w=300&q=80" alt="Blog Thumb" class="w-24 h-24 rounded-xl object-cover flex-shrink-0">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase">01 Mar 2022</span>
+              <h4 class="text-sm font-bold text-white mt-1 mb-2 hover:text-red-500 transition-colors">Why cheese quality defines the ultimate pizza experience</h4>
+              <a href="#blog" class="text-xs font-bold text-red-500">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       10. FOOTER
+  ========================================== -->
+  <footer class="bg-zinc-950 border-t border-zinc-900 text-zinc-400 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Column 1: Info -->
         <div>
-          <h4 class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-4">Navigation</h4>
-          <ul class="space-y-2.5 text-xs font-medium">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Information</h4>
+          <ul class="space-y-2 text-xs">
             <li><a href="#home" class="hover:text-red-500 transition-colors">Home</a></li>
-            <li><a href="#menu" class="hover:text-red-500 transition-colors">Full Menu Catalog</a></li>
-            <li><a href="#deals" class="hover:text-red-500 transition-colors">Combo Offers</a></li>
-            <li><a href="#about" class="hover:text-red-500 transition-colors">About Us</a></li>
-            <li><a href="#reviews" class="hover:text-red-500 transition-colors">Customer Reviews</a></li>
+            <li><a href="#blog" class="hover:text-red-500 transition-colors">Blog</a></li>
+            <li><a href="#story" class="hover:text-red-500 transition-colors">About Us</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Menu</a></li>
+            <li><a href="#reservation" class="hover:text-red-500 transition-colors">Contact Us</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Contact Info -->
+        <!-- Column 2: Top Items -->
         <div>
-          <h4 class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-4">Contact Info</h4>
-          <ul class="space-y-3 text-xs">
-            <li class="flex items-start gap-2.5">
-              <i class="fa-solid fa-location-dot text-red-500 mt-0.5"></i>
-              <span>[Your Restaurant Street Address, City, Country]</span>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-phone text-red-500"></i>
-              <a href="tel:+923000000000" class="hover:text-white font-bold">+92 3XX XXXXXXX</a>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-truck-fast text-red-500"></i>
-              <span>Dine-in • Takeout • Delivery</span>
-            </li>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Top Items</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Pepperoni Pizza</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Swiss Mushroom</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Barbeque Chicken</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Vegetarian Delight</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Ham & Cheese</a></li>
           </ul>
         </div>
 
-        <!-- Column 4: Ordering Notice -->
+        <!-- Column 3: Others -->
         <div>
-          <h4 class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-4">Order Today</h4>
-          <p class="text-xs leading-relaxed mb-4 text-zinc-400">
-            Open daily for dine-in, pickup, and delivery. Click to place your order via WhatsApp.
-          </p>
-          <a href="tel:+923000000000" class="w-full bg-red-950/50 hover:bg-red-900 text-white font-bold py-2.5 rounded-xl border border-red-500/30 text-xs flex items-center justify-center gap-2 transition-colors">
-            <i class="fa-solid fa-phone text-red-500"></i> Call +92 3XX XXXXXXX
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Others</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Checkout</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Shopping Cart</a></li>
+            <li><a href="#menu" class="hover:text-red-500 transition-colors">Our Products</a></li>
+            <li><a href="#reservation" class="hover:text-red-500 transition-colors">Locations</a></li>
+            <li><a href="#" class="hover:text-red-500 transition-colors">Legal & Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Social & Newsletter -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Social Media</h4>
+          <div class="flex items-center gap-3 mb-4">
+            <a href="#" class="w-9 h-9 rounded-full bg-zinc-900 hover:bg-red-600 text-white flex items-center justify-center text-sm transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full bg-zinc-900 hover:bg-red-600 text-white flex items-center justify-center text-sm transition-colors"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full bg-zinc-900 hover:bg-red-600 text-white flex items-center justify-center text-sm transition-colors"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full bg-zinc-900 hover:bg-red-600 text-white flex items-center justify-center text-sm transition-colors"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <p class="text-xs text-zinc-400 mb-3">Signup and get exclusive offers and coupon codes</p>
+          <a href="#reservation" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-colors">
+            Sign Up
           </a>
         </div>
 
       </div>
 
-      <div class="pt-6 sm:pt-8 border-t border-zinc-900 text-center text-xs text-zinc-500">
-        <p>© 2026 [YOUR RESTAURANT NAME]. All rights reserved. Demo presentation template.</p>
+      <div class="pt-8 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        <ul class="flex flex-wrap gap-4 text-zinc-400">
+          <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white">Refund Policy</a></li>
+          <li><a href="#" class="hover:text-white">Cookie Policy</a></li>
+          <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+        </ul>
+        <p>© 2026 Pizzon. All Rights Reserved. Dark Theme Pitch Edition.</p>
       </div>
     </div>
   </footer>
 
 
   <!-- ==========================================
-       13. INTERACTIVE CART MODAL
+       11. CART DRAWER MODAL
   ========================================== -->
-  <div id="cart-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 hidden">
-    <div class="bg-zinc-950 border border-red-500/30 w-full max-w-lg rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh]">
-      
-      <!-- Modal Header -->
-      <div class="p-4 sm:p-5 bg-zinc-900 border-b border-red-900/30 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold red-glow">
-            <i class="fa-solid fa-bag-shopping"></i>
-          </div>
-          <div>
-            <h3 class="text-base sm:text-lg font-bold text-white font-heading">Your Food Order</h3>
-            <span class="text-[11px] text-zinc-400">[YOUR RESTAURANT NAME]</span>
-          </div>
+  <div id="cart-drawer-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex justify-end hidden">
+    <div class="bg-zinc-950 border-l border-zinc-800 w-full max-w-md h-full flex flex-col justify-between p-6 shadow-2xl">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-zinc-800">
+          <h3 class="text-lg font-bold text-white uppercase font-heading">Shopping Cart</h3>
+          <button id="close-cart-drawer" class="text-zinc-400 hover:text-white text-xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
 
-        <button id="close-cart-modal" class="text-zinc-400 hover:text-white p-1 text-xl">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <!-- Fulfillment Type Selector -->
-      <div class="p-3.5 sm:p-4 bg-zinc-900/60 border-b border-zinc-800">
-        <label class="text-[10px] sm:text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2 block">Order Service Type:</label>
-        <div class="grid grid-cols-3 gap-2">
-          <button type="button" data-type="Delivery" class="fulfillment-option bg-red-600 border border-red-500 text-white font-bold py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 transition-all">
-            <i class="fa-solid fa-motorcycle"></i> Delivery
-          </button>
-          <button type="button" data-type="Takeout" class="fulfillment-option bg-zinc-800 border border-zinc-700 text-zinc-300 hover:bg-zinc-700 font-bold py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 transition-all">
-            <i class="fa-solid fa-bag-shopping"></i> Takeout
-          </button>
-          <button type="button" data-type="Dine-in" class="fulfillment-option bg-zinc-800 border border-zinc-700 text-zinc-300 hover:bg-zinc-700 font-bold py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 transition-all">
-            <i class="fa-solid fa-utensils"></i> Dine-in
-          </button>
+        <div id="cart-drawer-items" class="py-6 space-y-4 max-h-[60vh] overflow-y-auto">
+          <!-- Rendered dynamically -->
         </div>
       </div>
 
-      <!-- Scrollable Cart Items -->
-      <div id="cart-modal-items" class="p-4 sm:p-5 flex-1 overflow-y-auto space-y-3">
-        <!-- Rendered dynamically by app.js -->
-      </div>
-
-      <!-- Customer Form Fields -->
-      <div class="p-4 sm:p-5 bg-zinc-900/90 border-t border-zinc-800 space-y-3">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-          <input type="text" id="customer-name" placeholder="Your Name" class="bg-zinc-950 border border-zinc-700 focus:border-red-500 rounded-xl px-3.5 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none">
-          <input type="tel" id="customer-phone" placeholder="Phone Number" class="bg-zinc-950 border border-zinc-700 focus:border-red-500 rounded-xl px-3.5 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none">
+      <div class="pt-4 border-t border-zinc-800 space-y-4">
+        <div class="flex items-center justify-between text-base font-extrabold text-white">
+          <span>Subtotal:</span>
+          <span id="cart-drawer-subtotal" class="text-amber-400">$0.00</span>
         </div>
-        <input type="text" id="customer-address" placeholder="Delivery Address (House #, Street, City)" class="w-full bg-zinc-950 border border-zinc-700 focus:border-red-500 rounded-xl px-3.5 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none">
-        <input type="text" id="customer-notes" placeholder="Special Instructions (e.g. Extra cheese, spicy)" class="w-full bg-zinc-950 border border-zinc-700 focus:border-red-500 rounded-xl px-3.5 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none">
-        
-        <!-- Totals Summary -->
-        <div class="pt-2 border-t border-zinc-800 space-y-1">
-          <div class="flex items-center justify-between text-xs text-zinc-400">
-            <span>Subtotal:</span>
-            <span id="cart-subtotal" class="font-bold text-white">Rs. 0</span>
-          </div>
-          <div class="flex items-center justify-between text-xs sm:text-sm font-extrabold text-white pt-1">
-            <span>Grand Total:</span>
-            <span id="cart-total" class="text-red-500 text-base sm:text-lg">Rs. 0</span>
-          </div>
-        </div>
+        <p class="text-[11px] text-zinc-500">Taxes and shipping calculated at checkout</p>
 
-        <!-- Action Buttons -->
-        <div class="grid grid-cols-2 gap-2.5 pt-1">
-          <a href="tel:+923000000000" class="bg-zinc-800 hover:bg-zinc-700 text-white font-bold py-3 rounded-xl border border-zinc-700 text-xs flex items-center justify-center gap-1.5 transition-colors">
-            <i class="fa-solid fa-phone text-red-500"></i> Call Direct
-          </a>
-          <button id="whatsapp-order-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3 rounded-xl shadow-lg text-xs flex items-center justify-center gap-1.5 transition-colors">
-            <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Order
+        <div class="grid grid-cols-2 gap-3">
+          <button onclick="showToast('Proceeding to Checkout...')" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl text-xs">
+            Checkout
+          </button>
+          <button onclick="showToast('Cart saved!')" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold py-3 rounded-xl text-xs border border-zinc-700">
+            View Cart
           </button>
         </div>
       </div>
-
     </div>
   </div>
 
 
   <!-- ==========================================
-       14. MOBILE STICKY BOTTOM ACTION BAR
+       12. SEARCH POPUP MODAL
   ========================================== -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-zinc-950/98 backdrop-blur-xl border-t border-red-900/30 p-2.5 sm:p-3 flex items-center justify-between gap-2.5 shadow-2xl">
-    <a href="tel:+923000000000" class="flex-1 bg-red-950/60 border border-red-600/30 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2">
-      <i class="fa-solid fa-phone text-red-500"></i> Call Now
-    </a>
-    <button class="cart-trigger flex-1 bg-gradient-to-r from-red-600 to-red-700 text-white font-extrabold py-2.5 rounded-xl shadow-lg red-glow text-xs flex items-center justify-center gap-2">
-      <i class="fa-solid fa-cart-shopping"></i> Order (<span class="cart-count">0</span>)
-    </button>
+  <div id="search-popup-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="w-full max-w-xl text-center space-y-4">
+      <div class="flex justify-end">
+        <button id="close-search-popup" class="text-zinc-400 hover:text-white text-2xl p-2">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white font-heading">What are you looking for?</h3>
+      <div class="relative">
+        <input type="text" placeholder="Search pizza, burger, pasta..." class="w-full bg-zinc-900 border border-zinc-700 focus:border-red-500 text-white rounded-2xl px-6 py-4 text-base focus:outline-none">
+        <button type="button" onclick="showToast('Searching menu...')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-red-600 text-white px-5 py-2.5 rounded-xl font-bold text-xs">
+          Search
+        </button>
+      </div>
+    </div>
   </div>
 
 
