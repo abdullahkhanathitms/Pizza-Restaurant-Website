@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Universal Dark Red Pizza Website Template</title>
-  <meta name="description" content="Delicious Oven Baked Pizza - Better Ingredients. Better Pizza. Order Online in Pakistan with zero commission.">
+  <title>Horizon Legal Associates | Trusted Advocates & Legal Counsel in Pakistan</title>
+  <meta name="description" content="Horizon Legal Associates provides strategic legal counsel across corporate law, constitutional litigation, real estate, criminal defense, family inheritance, and taxation in Pakistan.">
+  <meta name="keywords" content="Law firm Karachi, High Court Advocates Pakistan, Corporate lawyer, Property law Karachi, Succession certificate advocate, Horizon Legal Associates">
   
+  <!-- Open Graph / Social SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Horizon Legal Associates | Trusted Legal Counsel">
+  <meta property="og:description" content="Strategic legal counsel, High Court representation, corporate advisory, and client-focused legal solutions.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -20,56 +27,97 @@
       theme: {
         extend: {
           colors: {
-            pizzonRed: '#DC2626',
-            pizzonRedDark: '#B91C1C',
-            pizzonDark: '#09090B'
+            legalNavy: '#0B1F33',
+            legalNavyDark: '#061220',
+            legalGold: '#C5A059',
+            legalGoldDark: '#A6823C',
+            legalIvory: '#F7F5F0'
           }
         }
       }
     }
   </script>
+
+  <!-- Schema.org JSON-LD for LegalService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Horizon Legal Associates",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "+92 300 1234567",
+    "email": "contact@horizonlegal.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Suite 704, Horizon Legal Chambers, Main Clifton Road",
+      "addressLocality": "Karachi",
+      "addressRegion": "Sindh",
+      "postalCode": "75600",
+      "addressCountry": "PK"
+    },
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "url": "https://horizonlegal.com"
+  }
+  </script>
 </head>
-<body class="bg-zinc-950 text-zinc-100 antialiased overflow-x-hidden">
+<body class="bg-slate-950 text-slate-100 antialiased overflow-x-hidden">
 
   <!-- ==========================================
-       1. HEADER / NAVBAR (LOGO IS ICON ONLY)
+       TOPBAR & HEADER NAVIGATION
   ========================================== -->
-  <header class="fixed top-0 left-0 right-0 z-40 pizzon-nav transition-all duration-300">
+  <div class="bg-slate-950 text-slate-300 text-xs py-2 border-b border-slate-800/80 hidden sm:block">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <div class="flex items-center gap-6">
+        <span><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i>Clifton Road, Karachi, Pakistan</span>
+        <span><i class="fa-solid fa-phone text-amber-500 mr-2"></i>+92 300 1234567</span>
+        <span><i class="fa-solid fa-envelope text-amber-500 mr-2"></i>contact@horizonlegal.com</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <span><i class="fa-regular fa-clock text-amber-500 mr-1.5"></i>Mon - Fri: 9:00 AM - 6:00 PM</span>
+        <div class="flex items-center gap-3 ml-2 text-slate-400">
+          <a href="#" class="hover:text-amber-400 transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" class="hover:text-amber-400 transition-colors" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-amber-400 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="sticky top-0 left-0 right-0 z-40 legal-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo: ICON ONLY (NO TEXT) -->
-      <a href="#home" class="flex items-center group" title="Pizza Restaurant Logo">
-        <div class="w-11 h-11 bg-red-600 text-white rounded-xl shadow-lg red-glow flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
-          <i class="fa-solid fa-pizza-slice"></i>
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/40 text-amber-400 flex items-center justify-center text-xl group-hover:bg-amber-500 group-hover:text-slate-950 transition-all duration-300">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <div>
+          <span class="text-xl sm:text-2xl font-bold tracking-tight text-white font-serif block leading-none">
+            HORIZON <span class="text-amber-400 font-normal">LEGAL</span>
+          </span>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400 font-semibold block mt-1">Associates & Advocates</span>
         </div>
       </a>
 
-      <!-- Navigation Links (Centered) -->
-      <nav class="hidden md:flex items-center gap-7 lg:gap-9 text-xs sm:text-sm font-bold uppercase tracking-wider text-zinc-300">
-        <a href="#home" class="text-red-500 hover:text-red-400 transition-colors">Home</a>
-        <a href="#about" class="hover:text-red-500 transition-colors">About</a>
-        <a href="#menu" class="hover:text-red-500 transition-colors">Menu</a>
-        <a href="#reservation" class="hover:text-red-500 transition-colors">Order</a>
-        <a href="#strength" class="hover:text-red-500 transition-colors">Why Us</a>
-        <a href="#contact" class="hover:text-red-500 transition-colors">Contact</a>
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-200">
+        <a href="#home" class="text-amber-400 hover:text-amber-300 transition-colors">Home</a>
+        <a href="#about" class="hover:text-amber-400 transition-colors">About Firm</a>
+        <a href="#practice-areas" class="hover:text-amber-400 transition-colors">Practice Areas</a>
+        <a href="#attorneys" class="hover:text-amber-400 transition-colors">Our Team</a>
+        <a href="#process" class="hover:text-amber-400 transition-colors">How We Work</a>
+        <a href="#insights" class="hover:text-amber-400 transition-colors">Insights</a>
+        <a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
       </nav>
 
-      <!-- Action Buttons & Icons -->
-      <div class="flex items-center gap-3 sm:gap-4">
-        
-        <!-- Search Trigger -->
-        <button type="button" class="search-trigger text-zinc-300 hover:text-red-500 text-lg p-2 transition-colors">
-          <i class="fa-solid fa-magnifying-glass"></i>
+      <!-- Primary Action Button -->
+      <div class="flex items-center gap-3">
+        <button onclick="openConsultationModal()" class="btn-gold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider hidden sm:flex items-center gap-2">
+          <i class="fa-solid fa-calendar-check text-xs"></i>
+          <span>Book Consultation</span>
         </button>
 
-        <!-- Top Right Button: Order Now -->
-        <button type="button" class="cart-drawer-trigger bg-red-600 hover:bg-red-700 text-white font-extrabold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg red-glow transition-all">
-          <span>Order Now</span>
-          <span class="cart-count bg-white text-red-600 text-xs font-extrabold w-5 h-5 rounded-full flex items-center justify-center">0</span>
-        </button>
-
-        <!-- Mobile Drawer Toggle -->
-        <button id="pizzon-menu-toggle" class="md:hidden text-zinc-200 hover:text-red-500 p-2 text-2xl" aria-label="Toggle navigation">
+        <button id="mobile-menu-toggle" class="lg:hidden text-slate-200 hover:text-amber-400 p-2 text-2xl" aria-label="Toggle Navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -78,103 +126,145 @@
   </header>
 
   <!-- Mobile Drawer Overlay -->
-  <div id="pizzon-mobile-drawer" class="fixed inset-0 z-50 bg-zinc-950/98 backdrop-blur-2xl translate-x-full transition-transform duration-300 flex flex-col justify-between p-6 md:hidden">
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-slate-950/98 backdrop-blur-2xl translate-x-full transition-transform duration-300 flex flex-col justify-between p-6 lg:hidden">
     <div>
-      <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
-        <div class="w-10 h-10 bg-red-600 text-white rounded-xl shadow-lg red-glow flex items-center justify-center text-lg">
-          <i class="fa-solid fa-pizza-slice"></i>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </div>
+          <span class="text-lg font-bold text-white font-serif">HORIZON LEGAL</span>
         </div>
-        <button id="close-pizzon-drawer" class="text-zinc-400 hover:text-white text-2xl p-1">
+        <button id="close-mobile-drawer" class="text-slate-400 hover:text-white text-2xl p-1">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
-      <nav class="flex flex-col gap-4 py-6 text-base font-bold uppercase tracking-wider text-zinc-200">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#menu">Menu Catalog</a>
-        <a href="#reservation">Order & Table</a>
-        <a href="#strength">Why Us</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact Us</a>
+      <nav class="flex flex-col gap-4 py-6 text-sm font-bold uppercase tracking-wider text-slate-200">
+        <a href="#home" onclick="closeModal('mobile-drawer')">Home</a>
+        <a href="#about" onclick="closeModal('mobile-drawer')">About Firm</a>
+        <a href="#practice-areas" onclick="closeModal('mobile-drawer')">Practice Areas</a>
+        <a href="#attorneys" onclick="closeModal('mobile-drawer')">Attorneys & Partners</a>
+        <a href="#process" onclick="closeModal('mobile-drawer')">How We Work</a>
+        <a href="#insights" onclick="closeModal('mobile-drawer')">Legal Insights</a>
+        <a href="#contact" onclick="closeModal('mobile-drawer')">Contact Us</a>
       </nav>
     </div>
 
-    <div class="pt-4 border-t border-zinc-800">
-      <button class="cart-drawer-trigger w-full bg-red-600 text-white font-extrabold py-3.5 rounded-xl uppercase flex items-center justify-center gap-2 text-xs red-glow">
-        <i class="fa-solid fa-cart-shopping"></i> View Cart (<span class="cart-count">0</span>)
+    <div class="pt-4 border-t border-slate-800">
+      <button onclick="openConsultationModal(); closeModal('mobile-drawer')" class="w-full btn-gold py-3.5 rounded-xl uppercase font-extrabold flex items-center justify-center gap-2 text-xs">
+        <i class="fa-solid fa-calendar-check"></i> Book Consultation
       </button>
     </div>
   </div>
 
 
   <!-- ==========================================
-       2. HERO BANNER (WOOD TEXTURE BACKGROUND + OVERLAY + UPLOADED PIZZA IMAGE)
+       2. HERO SECTION
   ========================================== -->
-  <section id="home" class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 wood-hero-bg overflow-hidden">
-    
-    <!-- Red Glow Accent -->
-    <div class="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-red-600/25 rounded-full blur-[160px] pointer-events-none"></div>
-
+  <section id="home" class="relative pt-24 pb-20 sm:pt-36 sm:pb-28 lg:pt-40 lg:pb-32 legal-hero-bg border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Left Side: Uploaded Pizza Image on Wooden Board with Glass Price Badge -->
-        <div class="lg:col-span-6 relative order-2 lg:order-1">
-          <div class="relative mx-auto max-w-md lg:max-w-none text-center">
-            
-            <!-- Red Glow Backdrop -->
-            <div class="absolute -inset-4 bg-red-600/30 rounded-full blur-3xl opacity-50 animate-pulse-glow"></div>
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest">
+            <i class="fa-solid fa-award"></i>
+            <span>High Court Advocates & Legal Consultants</span>
+          </div>
 
-            <!-- Uploaded Pizza Image (hero-pizza.jpg) -->
-            <div class="relative z-10">
-              <img src="hero-pizza.jpg" 
-                alt="Delicious Oven Fresh Pizza" 
-                class="w-72 sm:w-96 lg:w-[480px] h-72 sm:h-96 lg:h-[480px] object-cover rounded-full mx-auto border-4 border-red-600/40 shadow-2xl animate-float">
+          <h1 class="hero-headline text-4xl sm:text-6xl lg:text-6xl font-black text-white tracking-tight font-serif leading-tight">
+            Experienced Legal Counsel. <br>
+            <span class="text-gold-gradient">Trusted Representation.</span>
+          </h1>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+            Providing strategic, result-oriented legal counsel with unyielding integrity, deep High Court trial experience, and an absolute commitment to safeguarding your personal & corporate interests.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <button onclick="openConsultationModal()" class="w-full sm:w-auto btn-gold px-8 py-4 rounded-xl text-xs uppercase font-extrabold tracking-wider flex items-center justify-center gap-2 shadow-xl">
+              <span>Book a Consultation</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <a href="#practice-areas" class="w-full sm:w-auto btn-outline-gold px-8 py-4 rounded-xl text-xs uppercase font-bold tracking-wider text-center">
+              Explore Practice Areas
+            </a>
+          </div>
+
+          <!-- Trust Quick Badges -->
+          <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+            <div>
+              <span class="text-xs text-amber-400 font-bold uppercase tracking-wider block mb-0.5">Confidentiality</span>
+              <span class="text-[11px] text-slate-400">100% Attorney Privilege</span>
+            </div>
+            <div>
+              <span class="text-xs text-amber-400 font-bold uppercase tracking-wider block mb-0.5">Court Practice</span>
+              <span class="text-[11px] text-slate-400">High Court & Appellate</span>
+            </div>
+            <div>
+              <span class="text-xs text-amber-400 font-bold uppercase tracking-wider block mb-0.5">Advisory</span>
+              <span class="text-[11px] text-slate-400">SECP & Corporate Audit</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual Card -->
+        <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 p-2 bg-slate-900 shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80" 
+                alt="Horizon Legal Chambers" class="w-full h-80 sm:h-96 object-cover rounded-xl">
               
-              <!-- Frosted Glass Price Badge Overlay -->
-              <div class="absolute bottom-6 right-4 sm:bottom-10 sm:right-10 z-20 glass-price-card px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 border border-red-500/40">
-                <span class="text-xl sm:text-2xl font-black text-white font-heading">Rs. 650</span>
-                <span class="text-xs font-bold text-red-500 uppercase tracking-wider leading-tight text-left">
-                  Get<br>Only
-                </span>
+              <!-- Floating Glass Experience Badge -->
+              <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-950/90 backdrop-blur-md border border-amber-500/40 shadow-xl flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-500 text-slate-950 font-black font-serif flex items-center justify-center text-xl flex-shrink-0">
+                  25+
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white font-serif">Years of Legal Excellence</h4>
+                  <p class="text-xs text-slate-300">Trusted by Corporations, Families & Individuals across Pakistan</p>
+                </div>
               </div>
             </div>
 
           </div>
         </div>
 
-        <!-- Right Side: Text Content (Pure Red & Black Theme) -->
-        <div class="lg:col-span-6 space-y-5 text-center lg:text-left order-1 lg:order-2">
-          
-          <!-- Headline: Delicious Pizza -->
-          <div>
-            <span class="text-red-500 font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight block font-heading">
-              Delicious
-            </span>
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[0.95] font-heading">
-              Pizza
-            </h1>
-          </div>
+      </div>
+    </div>
+  </section>
 
-          <!-- Subtitle: Better Ingredients. Better Pizza -->
-          <h3 class="text-lg sm:text-xl font-extrabold text-zinc-200 tracking-wide">
-            Better Ingredients. Better Pizza
-          </h3>
 
-          <!-- Description -->
-          <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed max-w-lg mx-auto lg:mx-0 font-normal">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis no.
-          </p>
+  <!-- ==========================================
+       3. TRUST & CREDENTIALS STRIP (STATS)
+  ========================================== -->
+  <section class="py-12 bg-slate-900 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        
+        <div class="text-center p-4 rounded-2xl bg-slate-950/60 border border-slate-800">
+          <span class="text-3xl sm:text-4xl font-black text-amber-400 font-serif block mb-1">25+</span>
+          <span class="text-xs font-bold text-slate-300 uppercase tracking-wider">Years Experience</span>
+        </div>
 
-          <!-- Primary Action Button: Red Button Order Now -->
-          <div class="pt-2">
-            <button class="cart-drawer-trigger bg-red-600 hover:bg-red-700 text-white font-extrabold px-9 py-4 rounded-full text-xs sm:text-sm uppercase tracking-wider shadow-2xl red-glow inline-flex items-center gap-2 transition-all hover:scale-105">
-              <span>Order Now</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
+        <div class="text-center p-4 rounded-2xl bg-slate-950/60 border border-slate-800">
+          <span class="text-3xl sm:text-4xl font-black text-amber-400 font-serif block mb-1">2,500+</span>
+          <span class="text-xs font-bold text-slate-300 uppercase tracking-wider">Matters Advised</span>
+        </div>
 
+        <div class="text-center p-4 rounded-2xl bg-slate-950/60 border border-slate-800">
+          <span class="text-3xl sm:text-4xl font-black text-amber-400 font-serif block mb-1">98%</span>
+          <span class="text-xs font-bold text-slate-300 uppercase tracking-wider">Client Satisfaction</span>
+        </div>
+
+        <div class="text-center p-4 rounded-2xl bg-slate-950/60 border border-slate-800">
+          <span class="text-3xl sm:text-4xl font-black text-amber-400 font-serif block mb-1">30+</span>
+          <span class="text-xs font-bold text-slate-300 uppercase tracking-wider">Practice Specialties</span>
         </div>
 
       </div>
@@ -183,42 +273,49 @@
 
 
   <!-- ==========================================
-       3. ABOUT US SECTION
+       4. ABOUT THE FIRM
   ========================================== -->
-  <section id="about" class="py-20 bg-zinc-900 border-b border-zinc-800">
+  <section id="about" class="py-20 bg-slate-950 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
         
         <!-- Left Image -->
-        <div class="lg:col-span-6">
-          <div class="relative rounded-3xl overflow-hidden border border-red-600/30 p-2 bg-zinc-950 shadow-2xl red-border-glow">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" 
-              alt="About Delicious Pizza" class="w-full h-80 sm:h-96 object-cover rounded-2xl">
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 p-2 bg-slate-900 shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=900&q=80" 
+              alt="Law Chambers Meeting" class="w-full h-96 object-cover rounded-xl">
           </div>
         </div>
 
         <!-- Right Content -->
-        <div class="lg:col-span-6 space-y-5">
-          <span class="text-red-500 font-extrabold uppercase tracking-widest text-xs">About Our Brand</span>
-          <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">
-            Authentic Taste & <span class="text-red-500">Fresh Ingredients</span>
+        <div class="lg:col-span-7 space-y-6">
+          <span class="section-tag">About Horizon Legal</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-white font-serif">
+            Built on Experience. <br>
+            <span class="text-amber-400">Guided by Integrity.</span>
           </h2>
-          <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Freshly baked hand-tossed dough with 100% real mozzarella cheese.
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Horizon Legal Associates is a full-service law firm based in Karachi, Pakistan. Founded on the bedrock principles of professional ethics, meticulous legal research, and vigorous advocacy, our firm delivers comprehensive legal solutions across corporate, civil, constitutional, property, and criminal jurisprudence.
+          </p>
+
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Whether representing commercial conglomerates in SECP compliance and High Court writs, or assisting family estates with succession certificates and real estate title disputes, our senior partners provide direct oversight to ensure absolute confidentiality and strategic execution.
           </p>
 
           <div class="grid grid-cols-2 gap-4 pt-2">
-            <div class="p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
-              <i class="fa-solid fa-fire text-red-500 text-xl mb-2"></i>
-              <h4 class="text-sm font-bold text-white">Fresh Oven Baked</h4>
-              <p class="text-xs text-zinc-400 mt-1">Baked hot to perfection</p>
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+              <i class="fa-solid fa-building-columns text-amber-500 text-xl mb-2"></i>
+              <h4 class="text-sm font-bold text-white font-serif">High Court Practice</h4>
+              <p class="text-xs text-slate-400 mt-1">Appellate litigation & writ petitions</p>
             </div>
-            <div class="p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
-              <i class="fa-solid fa-motorcycle text-red-500 text-xl mb-2"></i>
-              <h4 class="text-sm font-bold text-white">Fast Delivery</h4>
-              <p class="text-xs text-zinc-400 mt-1">Hot delivery to your door</p>
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+              <i class="fa-solid fa-file-contract text-amber-500 text-xl mb-2"></i>
+              <h4 class="text-sm font-bold text-white font-serif">Corporate Advisory</h4>
+              <p class="text-xs text-slate-400 mt-1">Commercial agreements & SECP audits</p>
             </div>
           </div>
+
         </div>
 
       </div>
@@ -227,19 +324,20 @@
 
 
   <!-- ==========================================
-       4. OUR MENU (WITH SMALL/MEDIUM/LARGE SIZE TABS IN EVERY CARD)
+       5. PRACTICE AREAS
   ========================================== -->
-  <section id="menu" class="py-20 bg-zinc-950">
+  <section id="practice-areas" class="py-20 bg-slate-900 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-red-500 font-extrabold uppercase tracking-widest text-xs">Explore Our Offerings</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-white mt-1 font-heading">Browse Our <span class="text-red-500">Menu</span></h2>
+        <span class="section-tag">Our Expertise</span>
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mt-1 font-serif">Comprehensive <span class="text-amber-400">Practice Areas</span></h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-3">Tailored legal solutions designed to protect your rights, investments, and corporate operations.</p>
       </div>
 
-      <!-- Menu Grid (Rendered by app.js with Size Tabs & Zoom-In FX) -->
-      <div id="pizzon-menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        <!-- Rendered dynamically -->
+      <!-- Practice Areas Grid (Rendered by app.js) -->
+      <div id="practice-areas-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Dynamic Content -->
       </div>
 
     </div>
@@ -247,48 +345,127 @@
 
 
   <!-- ==========================================
-       5. WHY US / OUR STRENGTH
+       6. WHY CHOOSE US
   ========================================== -->
-  <section id="strength" class="py-20 bg-zinc-900 border-t border-zinc-800">
+  <section class="py-20 bg-slate-950 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-red-500 font-extrabold uppercase tracking-widest text-xs">Why We Are The Best</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-white mt-1 font-heading">Our Key <span class="text-red-500">Strengths</span></h2>
+        <span class="section-tag">The Horizon Advantage</span>
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mt-1 font-serif">Why Clients <span class="text-amber-400">Trust Us</span></h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="legal-card p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white font-serif mb-2">Absolute Confidentiality</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Every consultation, document, and corporate strategy is protected under strict attorney-client privilege.</p>
+        </div>
+
+        <div class="legal-card p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-gavel"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white font-serif mb-2">Proven High Court Advocacy</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Decades of courtroom trial experience handling intricate constitutional writs, civil appeals, and corporate suits.</p>
+        </div>
+
+        <div class="legal-card p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-chess"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white font-serif mb-2">Strategic Dispute Resolution</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">We combine pre-litigation negotiation with aggressive court litigation to achieve optimal, cost-efficient outcomes.</p>
+        </div>
+
+        <div class="legal-card p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white font-serif mb-2">Senior Partner Oversight</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Your legal matter receives direct, hands-on attention from seasoned senior partners, not junior trainees.</p>
+        </div>
+
+        <div class="legal-card p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-scale-unbalanced-flip"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white font-serif mb-2">Transparent Legal Billing</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Clear retainer agreements and predictable fee schedules with no hidden administrative surcharges.</p>
+        </div>
+
+        <div class="legal-card p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-earth-asia"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white font-serif mb-2">Overseas Pakistani Support</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Dedicated legal representation for non-resident Pakistanis managing property, inheritance, and business assets remotely.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       7. ATTORNEYS / OUR TEAM
+  ========================================== -->
+  <section id="attorneys" class="py-20 bg-slate-900 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="section-tag">Legal Leadership</span>
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mt-1 font-serif">Meet Our <span class="text-amber-400">Senior Advocates</span></h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-3">Experienced advocates admitted to practice before the High Courts and appellate tribunals of Pakistan.</p>
+      </div>
+
+      <!-- Attorneys Grid (Rendered by app.js) -->
+      <div id="attorneys-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Dynamic Content -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       8. FEATURED CASE EXPERIENCE
+  ========================================== -->
+  <section class="py-20 bg-slate-950 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="section-tag">Track Record</span>
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mt-1 font-serif">Decades of <span class="text-amber-400">Combined Experience</span></h2>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="p-6 rounded-3xl bg-zinc-950 border border-red-600/30 text-center hover-lift">
-          <div class="w-14 h-14 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
-            <i class="fa-solid fa-utensils"></i>
-          </div>
-          <h3 class="text-base font-bold text-white mb-2">All Kinds of Foods</h3>
-          <p class="text-zinc-400 text-xs leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-2">Corporate Advisory</span>
+          <h3 class="text-base font-bold text-white font-serif mb-2">Commercial M&A Restructuring</h3>
+          <p class="text-xs text-slate-400">Structured cross-border joint venture compliance and SECP clearance for leading industrial group.</p>
         </div>
 
-        <div class="p-6 rounded-3xl bg-zinc-950 border border-red-600/30 text-center hover-lift">
-          <div class="w-14 h-14 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
-            <i class="fa-solid fa-leaf"></i>
-          </div>
-          <h3 class="text-base font-bold text-white mb-2">Fresh Ingredients</h3>
-          <p class="text-zinc-400 text-xs leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-2">Constitutional Writs</span>
+          <h3 class="text-base font-bold text-white font-serif mb-2">High Court Relief</h3>
+          <p class="text-xs text-slate-400">Secured stay orders and writ enforcement safeguarding commercial operations against unlawful administrative action.</p>
         </div>
 
-        <div class="p-6 rounded-3xl bg-zinc-950 border border-red-600/30 text-center hover-lift">
-          <div class="w-14 h-14 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
-            <i class="fa-solid fa-heart"></i>
-          </div>
-          <h3 class="text-base font-bold text-white mb-2">Best Taste Guaranteed</h3>
-          <p class="text-zinc-400 text-xs leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-2">Real Estate</span>
+          <h3 class="text-base font-bold text-white font-serif mb-2">Commercial Land Title Settlement</h3>
+          <p class="text-xs text-slate-400">Resolved multi-decade title partition dispute for prime commercial estate in Clifton Karachi.</p>
         </div>
 
-        <div class="p-6 rounded-3xl bg-zinc-950 border border-red-600/30 text-center hover-lift">
-          <div class="w-14 h-14 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">
-            <i class="fa-solid fa-motorcycle"></i>
-          </div>
-          <h3 class="text-base font-bold text-white mb-2">On Time Delivery</h3>
-          <p class="text-zinc-400 text-xs leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-2">Estate Practice</span>
+          <h3 class="text-base font-bold text-white font-serif mb-2">Succession & Estate Partition</h3>
+          <p class="text-xs text-slate-400">Obtained High Court succession certificates and legal distribution for overseas heirs.</p>
         </div>
 
       </div>
@@ -297,138 +474,114 @@
 
 
   <!-- ==========================================
-       6. TABLE RESERVATION FORM
+       9. HOW WE WORK (4-STEP PROCESS)
   ========================================== -->
-  <section id="reservation" class="py-20 bg-zinc-950 border-t border-zinc-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Form -->
-        <div class="lg:col-span-6 space-y-6">
-          <span class="text-red-500 font-extrabold uppercase tracking-widest text-xs">Table Booking</span>
-          <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">Book A Table <span class="text-red-500">Now!</span></h2>
-          
-          <form id="reservation-form" class="space-y-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="text" id="res-name" placeholder="Name*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
-              <input type="email" placeholder="Email*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="tel" placeholder="Phone*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
-              <input type="text" placeholder="Time*" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="date" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-zinc-300 focus:outline-none">
-              <input type="number" placeholder="Guests (Persons)*" min="1" max="20" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-500 rounded-2xl px-4 py-3 text-xs text-white placeholder-zinc-500 focus:outline-none">
-            </div>
-
-            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-2xl text-xs uppercase tracking-wider shadow-lg red-glow">
-              Book Now
-            </button>
-          </form>
-        </div>
-
-        <!-- Pizza Tray Image -->
-        <div class="lg:col-span-6 text-center relative">
-          <div class="relative mx-auto max-w-md">
-            <div class="absolute -inset-4 bg-red-600/20 rounded-full blur-3xl opacity-50"></div>
-            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" 
-              alt="Reservation Pizza" class="relative z-10 w-80 h-80 sm:w-96 sm:h-96 object-cover rounded-full mx-auto border-4 border-red-600/40 shadow-2xl">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==========================================
-       7. CLIENT TESTIMONIALS
-  ========================================== -->
-  <section id="testimonials" class="py-20 bg-zinc-900 border-t border-zinc-800">
+  <section id="process" class="py-20 bg-slate-900 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-red-500 font-extrabold uppercase tracking-widest text-xs">Customer Reviews</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-white mt-1 font-heading">Client <span class="text-red-500">Testimonials</span></h2>
+        <span class="section-tag">Our Consultation Process</span>
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mt-1 font-serif">How We <span class="text-amber-400">Serve You</span></h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 relative">
+          <span class="text-4xl font-black text-amber-500/20 font-serif absolute top-4 right-4">01</span>
+          <h3 class="text-base font-bold text-white font-serif mb-2">Initial Consultation</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Detailed confidential discussion to evaluate facts, legal requirements, and immediate protective measures.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 relative">
+          <span class="text-4xl font-black text-amber-500/20 font-serif absolute top-4 right-4">02</span>
+          <h3 class="text-base font-bold text-white font-serif mb-2">Case Assessment</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Rigorous legal research, document verification, statutory precedent review, and risk analysis.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 relative">
+          <span class="text-4xl font-black text-amber-500/20 font-serif absolute top-4 right-4">03</span>
+          <h3 class="text-base font-bold text-white font-serif mb-2">Legal Strategy</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Formulating tailored petitions, commercial agreements, or settlement terms tailored to your objectives.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 relative">
+          <span class="text-4xl font-black text-amber-500/20 font-serif absolute top-4 right-4">04</span>
+          <h3 class="text-base font-bold text-white font-serif mb-2">Dedicated Advocacy</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Relentless representation before High Courts, regulatory tribunals, or commercial negotiation tables.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       10. CLIENT TESTIMONIALS
+  ========================================== -->
+  <section class="py-20 bg-slate-950 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="section-tag">Client Feedback</span>
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mt-1 font-serif">Client <span class="text-amber-400">Endorsements</span></h2>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
         
-        <div class="p-6 rounded-3xl bg-zinc-950 border border-zinc-800 hover-lift flex flex-col justify-between">
+        <div class="legal-card p-6 rounded-2xl flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-red-500 text-xs mb-4">
+            <div class="flex items-center gap-1 text-amber-400 text-xs mb-4">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-zinc-300 text-xs sm:text-sm italic leading-relaxed mb-6">
-              "Awesome taste and super fast delivery! The crust was hot and crispy."
+            <p class="text-slate-300 text-xs sm:text-sm italic leading-relaxed mb-6">
+              "Horizon Legal handled our corporate restructuring and SECP compliance with utmost professionalism. Senior partner oversight was evident throughout."
             </p>
           </div>
-
-          <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-            <div class="w-10 h-10 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-xs">
-              AH
-            </div>
-            <div>
-              <h4 class="text-xs sm:text-sm font-bold text-white">Ali Hassan</h4>
-              <span class="text-[11px] text-zinc-400 block">Verified Customer</span>
-            </div>
+          <div class="pt-4 border-t border-slate-800">
+            <h4 class="text-xs font-bold text-white font-serif">Corporate Client</h4>
+            <span class="text-[11px] text-slate-400">Textile Group Karachi</span>
           </div>
         </div>
 
-        <div class="p-6 rounded-3xl bg-zinc-950 border border-zinc-800 hover-lift flex flex-col justify-between">
+        <div class="legal-card p-6 rounded-2xl flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-red-500 text-xs mb-4">
+            <div class="flex items-center gap-1 text-amber-400 text-xs mb-4">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-zinc-300 text-xs sm:text-sm italic leading-relaxed mb-6">
-              "Best tikka pizza in town. WhatsApp ordering is smooth and fast!"
+            <p class="text-slate-300 text-xs sm:text-sm italic leading-relaxed mb-6">
+              "As an overseas Pakistani, resolving my commercial property title issue remotely seemed impossible. Advocate Daniel Khan secured clear High Court title orders within months."
             </p>
           </div>
-
-          <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-            <div class="w-10 h-10 rounded-full bg-zinc-800 text-red-500 font-bold flex items-center justify-center text-xs">
-              SK
-            </div>
-            <div>
-              <h4 class="text-xs sm:text-sm font-bold text-white">Saad Khan</h4>
-              <span class="text-[11px] text-zinc-400 block">Local Foodie</span>
-            </div>
+          <div class="pt-4 border-t border-slate-800">
+            <h4 class="text-xs font-bold text-white font-serif">Overseas Landowner</h4>
+            <span class="text-[11px] text-slate-400">London, UK</span>
           </div>
         </div>
 
-        <div class="p-6 rounded-3xl bg-zinc-950 border border-zinc-800 hover-lift flex flex-col justify-between">
+        <div class="legal-card p-6 rounded-2xl flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-1 text-red-500 text-xs mb-4">
+            <div class="flex items-center gap-1 text-amber-400 text-xs mb-4">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-zinc-300 text-xs sm:text-sm italic leading-relaxed mb-6">
-              "Great cheese quality and amazing garlic breadsticks."
+            <p class="text-slate-300 text-xs sm:text-sm italic leading-relaxed mb-6">
+              "Their team guided our family through the succession certificate process with great sensitivity and clarity. Highly recommended for complex estate matters."
             </p>
           </div>
-
-          <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-            <div class="w-10 h-10 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-xs">
-              ZM
-            </div>
-            <div>
-              <h4 class="text-xs sm:text-sm font-bold text-white">Zainab Malik</h4>
-              <span class="text-[11px] text-zinc-400 block">Regular Guest</span>
-            </div>
+          <div class="pt-4 border-t border-slate-800">
+            <h4 class="text-xs font-bold text-white font-serif">Private Family Estate Client</h4>
+            <span class="text-[11px] text-slate-400">Karachi, Pakistan</span>
           </div>
         </div>
 
@@ -438,130 +591,300 @@
 
 
   <!-- ==========================================
-       8. FOOTER
+       11. LEGAL INSIGHTS & PUBLICATIONS
   ========================================== -->
-  <footer id="contact" class="bg-zinc-950 border-t border-zinc-900 text-zinc-400 py-14">
+  <section id="insights" class="py-20 bg-slate-900 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="section-tag">Knowledge Base</span>
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mt-1 font-serif">Latest Legal <span class="text-amber-400">Insights</span></h2>
+      </div>
+
+      <!-- Insights Grid (Rendered by app.js) -->
+      <div id="insights-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Dynamic Content -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       12. BOOK A CONSULTATION SECTION (FORM)
+  ========================================== -->
+  <section id="book-consultation" class="py-20 bg-slate-950 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Column 1: Info -->
-        <div>
-          <div class="w-10 h-10 bg-red-600 text-white rounded-xl shadow-lg red-glow flex items-center justify-center text-lg mb-3">
-            <i class="fa-solid fa-pizza-slice"></i>
-          </div>
-          <p class="text-xs leading-relaxed text-zinc-400 mb-4">
-            Your destination for fresh handmade pizzas, zinger burgers, garlic breadsticks, and family deals.
+        <div class="lg:col-span-5 space-y-6">
+          <span class="section-tag">Confidential Appointment</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-white font-serif leading-tight">
+            Schedule a Private <br>
+            <span class="text-amber-400">Legal Consultation</span>
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Speak directly with our senior advocates. We will review your factual circumstances, outline statutory remedies, and provide immediate clarity on the path forward.
           </p>
-          <div class="text-xs font-bold text-red-500">
-            <i class="fa-solid fa-phone mr-1"></i> +92 3XX XXXXXXX
+
+          <div class="p-4 bg-slate-900 rounded-xl border border-amber-500/30 text-xs text-slate-300 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-amber-400">
+              <i class="fa-solid fa-lock"></i>
+              <span>Strict Attorney-Client Privilege</span>
+            </div>
+            <p>All information submitted through this form is handled under strict professional confidentiality.</p>
           </div>
         </div>
 
-        <!-- Column 2: Navigation -->
+        <div class="lg:col-span-7">
+          <form id="consultation-booking-form" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4 shadow-2xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-xs font-bold text-slate-300 block mb-1">Full Name*</label>
+                <input type="text" id="book-name" required placeholder="Advocate / Client Name" class="w-full bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none">
+              </div>
+              <div>
+                <label class="text-xs font-bold text-slate-300 block mb-1">Email Address*</label>
+                <input type="email" id="book-email" required placeholder="client@domain.com" class="w-full bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-xs font-bold text-slate-300 block mb-1">Phone Number*</label>
+                <input type="tel" id="book-phone" required placeholder="+92 300 1234567" class="w-full bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none">
+              </div>
+              <div>
+                <label class="text-xs font-bold text-slate-300 block mb-1">Practice Area*</label>
+                <select id="book-service" required class="w-full bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-xs text-slate-200 focus:outline-none">
+                  <option value="Corporate & Commercial Law">Corporate & Commercial Law</option>
+                  <option value="Civil & Constitutional Writs">Civil & Constitutional Writs</option>
+                  <option value="Property & Real Estate Law">Property & Real Estate Law</option>
+                  <option value="Family & Inheritance Law">Family & Inheritance Law</option>
+                  <option value="Criminal Defense & Bail">Criminal Defense & Bail</option>
+                  <option value="Taxation & Financial Audit">Taxation & Financial Audit</option>
+                  <option value="Intellectual Property & Trademarks">Intellectual Property & Trademarks</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-xs font-bold text-slate-300 block mb-1">Preferred Date*</label>
+                <input type="date" id="book-date" required class="w-full bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-xs text-slate-200 focus:outline-none">
+              </div>
+              <div>
+                <label class="text-xs font-bold text-slate-300 block mb-1">Preferred Time Window*</label>
+                <select id="book-time" required class="w-full bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-xs text-slate-200 focus:outline-none">
+                  <option value="Morning (10:00 AM - 1:00 PM)">Morning (10:00 AM - 1:00 PM)</option>
+                  <option value="Afternoon (2:00 PM - 5:00 PM)">Afternoon (2:00 PM - 5:00 PM)</option>
+                  <option value="Evening (5:00 PM - 7:00 PM)">Evening (5:00 PM - 7:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="text-xs font-bold text-slate-300 block mb-1">Case Brief / Message Summary</label>
+              <textarea id="book-message" rows="3" placeholder="Briefly describe your legal inquiry..." class="w-full bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full btn-gold py-4 rounded-xl text-xs font-extrabold uppercase tracking-wider shadow-lg">
+              Submit Confidential Consultation Request
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       13. CONTACT & OFFICE LOCATIONS SECTION
+  ========================================== -->
+  <section id="contact" class="py-20 bg-slate-900 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-white font-serif">Contact <span class="text-amber-400">Our Chambers</span></h2>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Our office is located in Clifton, Karachi. Contact us to schedule an in-person meeting or virtual consultation.
+          </p>
+
+          <div class="space-y-4 text-xs text-slate-300">
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-950 border border-slate-800">
+              <i class="fa-solid fa-location-dot text-amber-500 text-lg mt-0.5"></i>
+              <div>
+                <strong class="text-white block font-serif">Chambers Address:</strong>
+                <span>Suite 704, Horizon Legal Chambers, Main Clifton Road, Karachi, Pakistan</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-950 border border-slate-800">
+              <i class="fa-solid fa-phone text-amber-500 text-lg mt-0.5"></i>
+              <div>
+                <strong class="text-white block font-serif">Telephone & Direct Line:</strong>
+                <span>+92 300 1234567 / +92 21 35890000</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-950 border border-slate-800">
+              <i class="fa-solid fa-envelope text-amber-500 text-lg mt-0.5"></i>
+              <div>
+                <strong class="text-white block font-serif">Email Correspondence:</strong>
+                <span>contact@horizonlegal.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location Map Visual -->
+        <div class="lg:col-span-7">
+          <div class="rounded-2xl overflow-hidden border border-slate-800 h-80 sm:h-96 relative bg-slate-950">
+            <iframe 
+              title="Horizon Legal Chambers Map Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14483.568425265636!2d67.028913!3d24.833917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33dc4b64f331f%3A0x7d6f51f47c385b0!2sClifton%2C%20Karachi!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk" 
+              class="w-full h-full border-0 grayscale contrast-125 opacity-80" 
+              allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       14. FINAL CTA BANNER
+  ========================================== -->
+  <section class="py-16 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-b border-slate-800 text-center">
+    <div class="max-w-4xl mx-auto px-4 space-y-5">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white font-serif">Need Experienced Legal Counsel?</h2>
+      <p class="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto">
+        Take the first step toward resolving your legal matter with confidence. Our advocates are available for private consultations.
+      </p>
+      <button onclick="openConsultationModal()" class="btn-gold px-9 py-4 rounded-xl text-xs uppercase font-extrabold tracking-wider shadow-2xl inline-flex items-center gap-2">
+        <span>Book a Consultation Now</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       15. COMPREHENSIVE FOOTER
+  ========================================== -->
+  <footer class="bg-slate-950 text-slate-400 py-14 border-t border-slate-900 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
         <div>
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Quick Links</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="#home" class="hover:text-red-500 transition-colors">Home</a></li>
-            <li><a href="#about" class="hover:text-red-500 transition-colors">About Us</a></li>
-            <li><a href="#menu" class="hover:text-red-500 transition-colors">Menu Catalog</a></li>
-            <li><a href="#reservation" class="hover:text-red-500 transition-colors">Book A Table</a></li>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-lg">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <span class="text-base font-bold text-white font-serif">HORIZON LEGAL</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed mb-4">
+            Strategic legal advice, High Court advocacy, corporate advisory, and legal representation in Pakistan.
+          </p>
+          <div class="text-amber-400 font-bold">
+            <i class="fa-solid fa-phone mr-1.5"></i> +92 300 1234567
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white font-serif uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="hover:text-amber-400 transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-amber-400 transition-colors">About Firm</a></li>
+            <li><a href="#practice-areas" class="hover:text-amber-400 transition-colors">Practice Specialties</a></li>
+            <li><a href="#attorneys" class="hover:text-amber-400 transition-colors">Senior Advocates</a></li>
+            <li><a href="#insights" class="hover:text-amber-400 transition-colors">Legal Insights</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Menu Items -->
         <div>
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Top Items</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="#menu" class="hover:text-red-500 transition-colors">Chicken Tikka Feast</a></li>
-            <li><a href="#menu" class="hover:text-red-500 transition-colors">Creamy Malai Crust</a></li>
-            <li><a href="#menu" class="hover:text-red-500 transition-colors">Pepperoni Overload</a></li>
-            <li><a href="#menu" class="hover:text-red-500 transition-colors">Cheesy Garlic Sticks</a></li>
+          <h4 class="text-sm font-bold text-white font-serif uppercase tracking-wider mb-4">Practice Areas</h4>
+          <ul class="space-y-2">
+            <li><a href="#practice-areas" class="hover:text-amber-400 transition-colors">Corporate & Commercial Law</a></li>
+            <li><a href="#practice-areas" class="hover:text-amber-400 transition-colors">Constitutional Writ Petitions</a></li>
+            <li><a href="#practice-areas" class="hover:text-amber-400 transition-colors">Property Title Verification</a></li>
+            <li><a href="#practice-areas" class="hover:text-amber-400 transition-colors">Succession Certificates</a></li>
+            <li><a href="#practice-areas" class="hover:text-amber-400 transition-colors">Taxation & SECP Audits</a></li>
           </ul>
         </div>
 
-        <!-- Column 4: WhatsApp Direct -->
         <div>
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Direct Order</h4>
-          <p class="text-xs leading-relaxed mb-4 text-zinc-400">
-            Order directly on WhatsApp with zero app commission.
+          <h4 class="text-sm font-bold text-white font-serif uppercase tracking-wider mb-4">Legal Disclaimer</h4>
+          <p class="text-slate-400 text-[11px] leading-relaxed mb-4">
+            Disclaimer: Information on this website is for general educational guidance only and does not constitute formal legal advice. Consultation is required for matter-specific evaluation.
           </p>
-          <button class="cart-drawer-trigger bg-red-600 hover:bg-red-700 text-white w-full py-2.5 rounded-xl text-xs uppercase font-extrabold red-glow">
-            Order Now
+          <button onclick="openConsultationModal()" class="w-full btn-gold py-2.5 rounded-xl text-xs uppercase font-extrabold">
+            Schedule Appointment
           </button>
         </div>
 
       </div>
 
-      <div class="pt-8 border-t border-zinc-900 text-center text-xs text-zinc-500">
-        <p>© 2026 Pizza Restaurant. All Rights Reserved. Universal Red & Black Dark Theme Pitch Edition.</p>
+      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-500">
+        <p>© 2026 Horizon Legal Associates. All Rights Reserved. Production Law Firm Template.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-amber-400">Privacy Policy</a>
+          <a href="#" class="hover:text-amber-400">Terms of Representation</a>
+          <a href="#" class="hover:text-amber-400">Disclaimer</a>
+        </div>
       </div>
     </div>
   </footer>
 
 
   <!-- ==========================================
-       9. CART DRAWER MODAL
+       MODALS: CONSULTATION POPUP & DETAIL READER
   ========================================== -->
-  <div id="cart-drawer-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex justify-end hidden">
-    <div class="bg-zinc-950 border-l border-zinc-800 w-full max-w-md h-full flex flex-col justify-between p-5 sm:p-6 shadow-2xl">
-      <div>
-        <div class="flex items-center justify-between pb-4 border-b border-zinc-800">
-          <h3 class="text-lg font-bold text-white uppercase font-heading">Shopping Cart</h3>
-          <button id="close-cart-drawer" class="text-zinc-400 hover:text-white text-xl">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
+  <!-- Consultation Booking Modal -->
+  <div id="consultation-modal" class="fixed inset-0 z-50 legal-modal flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-amber-500/40 rounded-2xl w-full max-w-xl p-6 sm:p-8 space-y-4 shadow-2xl relative">
+      <button onclick="closeModal('consultation-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
 
-        <!-- Scrollable Cart Items -->
-        <div id="cart-drawer-items" class="py-4 space-y-3 max-h-[50vh] overflow-y-auto">
-          <!-- Rendered dynamically -->
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+          <i class="fa-solid fa-calendar-check"></i>
         </div>
-
-        <!-- Customer Inputs for WhatsApp Order -->
-        <div class="pt-3 border-t border-zinc-800 space-y-2">
-          <input type="text" id="customer-name" placeholder="Your Name" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none">
-          <input type="tel" id="customer-phone" placeholder="Phone Number" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none">
-          <input type="text" id="customer-address" placeholder="Delivery Address" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none">
-        </div>
+        <h3 class="text-xl font-bold text-white font-serif">Request Consultation</h3>
       </div>
 
-      <div class="pt-4 border-t border-zinc-800 space-y-3">
-        <div class="flex items-center justify-between text-base font-extrabold text-white">
-          <span>Total Bill:</span>
-          <span id="cart-drawer-subtotal" class="text-red-500 font-heading">Rs. 0</span>
-        </div>
+      <p class="text-xs text-slate-300">Fill out your details to request an appointment with our legal team.</p>
 
-        <button id="whatsapp-order-btn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg">
-          <i class="fa-brands fa-whatsapp text-lg"></i> Send Order via WhatsApp
+      <form onsubmit="event.preventDefault(); showToast('Your consultation request has been logged. Our office will call you shortly.'); closeModal('consultation-modal');" class="space-y-3 pt-2">
+        <input type="text" required placeholder="Your Full Name" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:border-amber-500 focus:outline-none">
+        <input type="tel" required placeholder="Phone Number" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:border-amber-500 focus:outline-none">
+        <input type="email" required placeholder="Email Address" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:border-amber-500 focus:outline-none">
+        <textarea rows="2" placeholder="Short description of your case..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:border-amber-500 focus:outline-none"></textarea>
+        <button type="submit" class="w-full btn-gold py-3 rounded-xl text-xs uppercase font-extrabold tracking-wider">
+          Submit Confidential Request
         </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Detail Reader Modal -->
+  <div id="detail-modal" class="fixed inset-0 z-50 legal-modal flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-950 border border-slate-800 rounded-2xl w-full max-w-2xl p-6 sm:p-8 space-y-4 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+      <button onclick="closeModal('detail-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="detail-modal-content">
+        <!-- Rendered by app.js -->
       </div>
     </div>
   </div>
 
-
-  <!-- ==========================================
-       10. SEARCH POPUP MODAL
-  ========================================== -->
-  <div id="search-popup-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 hidden">
-    <div class="w-full max-w-xl text-center space-y-4">
-      <div class="flex justify-end">
-        <button id="close-search-popup" class="text-zinc-400 hover:text-white text-2xl p-2">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <h3 class="text-2xl font-bold text-white font-heading">Search Menu</h3>
-      <div class="relative">
-        <input type="text" placeholder="Search pizza, burger, wings..." class="w-full bg-zinc-900 border border-zinc-700 focus:border-red-500 text-white rounded-2xl px-6 py-4 text-base focus:outline-none">
-        <button type="button" onclick="showToast('Searching menu...')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 text-xs uppercase font-extrabold rounded-xl">
-          Search
-        </button>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- App JavaScript -->
+  <!-- Application Script -->
   <script src="app.js"></script>
 
 </body>
