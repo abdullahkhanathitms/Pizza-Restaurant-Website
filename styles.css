@@ -1,25 +1,36 @@
 /* ==========================================================================
-   HORIZON LEGAL ASSOCIATES - PREMIUM LAW FIRM & LEGAL SERVICES STYLESHEET
-   Color System: Deep Navy (#0B1F33), Midnight Blue (#162B40), Gold (#B08D57), Warm Ivory (#F7F5F0)
+   HORIZON LEGAL ASSOCIATES - DESIGN SYSTEM (UI/UX PRO MAX v2.0 SPECIFICATION)
+   Style: Executive Trust & Authority
+   Palette: Deep Navy (#0A192F), Midnight Slate (#172A45), Antique Gold/Bronze (#B89758), Warm Off-White (#F8F9FA), Charcoal (#1A202C)
+   Typography: Cormorant Garamond (Headings) + Inter (Body Text)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-navy: #0B1F33;
-  --bg-navy-dark: #061220;
-  --bg-surface: #122538;
-  --bg-card: #172E47;
-  --accent-gold: #C5A059;
-  --accent-gold-dark: #A6823C;
-  --accent-gold-light: #E5C789;
-  --text-white: #FFFFFF;
-  --text-ivory: #F7F5F0;
-  --text-muted: #94A3B8;
-  --border-gold: rgba(197, 160, 89, 0.3);
-  --border-dark: rgba(255, 255, 255, 0.1);
-  --font-serif: 'Cinzel', serif;
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  /* Color Tokens - Restrained & Trustworthy (WCAG AA Compliant) */
+  --color-navy-dark: #061220;
+  --color-navy-primary: #0A192F;
+  --color-navy-surface: #172A45;
+  --color-navy-card: #0F233D;
+  --color-bronze-accent: #B89758;
+  --color-bronze-hover: #A38245;
+  --color-bronze-light: #E6D2A8;
+  --color-ivory-bg: #F8F9FA;
+  --color-charcoal-text: #1A202C;
+  --color-slate-muted: #94A3B8;
+  --color-white: #FFFFFF;
+
+  /* Borders & Shadows */
+  --border-bronze: rgba(184, 151, 88, 0.35);
+  --border-dark: rgba(255, 255, 255, 0.12);
+  --shadow-subtle: 0 4px 20px -2px rgba(6, 18, 32, 0.5);
+  --shadow-hover: 0 16px 36px -6px rgba(6, 18, 32, 0.7), 0 0 15px rgba(184, 151, 88, 0.15);
+
+  /* Typography Scale & Line Length */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --max-reading-width: 65ch;
 }
 
 * {
@@ -31,18 +42,26 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
-  background-color: var(--bg-navy-dark);
-  color: var(--text-ivory);
+  background-color: var(--color-navy-dark);
+  color: var(--color-ivory-bg);
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
   overflow-x: hidden;
   width: 100%;
-  line-height: 1.6;
+  line-height: 1.65;
+  font-size: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6, .font-serif {
   font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+/* Readable Paragraph Line-Length Constraint */
+.prose-readable {
+  max-width: var(--max-reading-width);
 }
 
 /* Custom Scrollbar */
@@ -50,116 +69,152 @@ h1, h2, h3, h4, h5, h6, .font-serif {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-navy-dark);
+  background: var(--color-navy-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-gold-dark);
+  background: var(--color-bronze-accent);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-gold);
+  background: var(--color-bronze-hover);
 }
 
-/* Top Navigation Bar */
+/* Accessible Keyboard Focus State */
+:focus-visible {
+  outline: 2px solid var(--color-bronze-accent);
+  outline-offset: 3px;
+}
+
+/* Skip Link for Accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--color-bronze-accent);
+  color: var(--color-navy-dark);
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  z-index: 100;
+  transition: top 0.2s ease;
+}
+.skip-to-content:focus {
+  top: 1rem;
+}
+
+/* Navigation Bar */
 .legal-nav {
-  background: rgba(11, 31, 51, 0.96);
+  background: rgba(10, 25, 47, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-bronze);
 }
 
-/* Gold Button Styles */
-.btn-gold {
-  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
-  color: #061220;
+/* Buttons System */
+.btn-bronze {
+  background: linear-gradient(135deg, var(--color-bronze-accent) 0%, var(--color-bronze-hover) 100%);
+  color: var(--color-navy-dark);
   font-weight: 700;
-  letter-spacing: 0.05em;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 20px rgba(197, 160, 89, 0.25);
+  letter-spacing: 0.04em;
+  min-height: 44px;
+  display: inline-flex;
+  items-center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(184, 151, 88, 0.25);
 }
-.btn-gold:hover {
-  background: linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 100%);
+.btn-bronze:hover {
+  background: linear-gradient(135deg, var(--color-bronze-light) 0%, var(--color-bronze-accent) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(197, 160, 89, 0.4);
+  box-shadow: 0 8px 24px rgba(184, 151, 88, 0.4);
 }
 
-.btn-outline-gold {
+.btn-outline-bronze {
   background: transparent;
-  color: var(--accent-gold);
-  border: 1px solid var(--accent-gold);
+  color: var(--color-bronze-accent);
+  border: 1px solid var(--color-bronze-accent);
   font-weight: 600;
-  letter-spacing: 0.05em;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.04em;
+  min-height: 44px;
+  display: inline-flex;
+  items-center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn-outline-gold:hover {
-  background: rgba(197, 160, 89, 0.12);
-  color: var(--accent-gold-light);
-  border-color: var(--accent-gold-light);
+.btn-outline-bronze:hover {
+  background: rgba(184, 151, 88, 0.12);
+  color: var(--color-bronze-light);
+  border-color: var(--color-bronze-light);
   transform: translateY(-2px);
 }
 
-/* Legal Cards & Glassmorphism */
+/* Glassmorphism & Legal Cards */
 .legal-card {
-  background: var(--bg-surface);
+  background: var(--color-navy-surface);
   border: 1px solid var(--border-dark);
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .legal-card:hover {
-  border-color: var(--border-gold);
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(197, 160, 89, 0.15);
+  border-color: var(--border-bronze);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
-/* Hero Section Styling */
+/* Hero Background Layer */
 .legal-hero-bg {
   background: 
-    linear-gradient(180deg, rgba(6, 18, 32, 0.85) 0%, rgba(11, 31, 51, 0.95) 100%),
+    linear-gradient(180deg, rgba(6, 18, 32, 0.88) 0%, rgba(10, 25, 47, 0.96) 100%),
     url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center;
 }
 
-/* Gold Text Gradient */
-.text-gold-gradient {
-  background: linear-gradient(135deg, #F5E6C8 0%, #C5A059 50%, #94712F 100%);
+/* Bronze Text Gradient */
+.text-bronze-gradient {
+  background: linear-gradient(135deg, #F5E6C8 0%, #B89758 50%, #8C6D32 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Accent Line Divider */
-.gold-divider {
-  height: 2px;
-  width: 60px;
-  background: linear-gradient(90deg, var(--accent-gold) 0%, transparent 100%);
-}
-
-/* Section Title Highlight */
+/* Section Subheading Tag */
 .section-tag {
-  color: var(--accent-gold);
+  color: var(--color-bronze-accent);
   font-weight: 700;
   font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
-/* Modal Backdrop */
+/* Accordion Item Animation */
+.faq-accordion-item {
+  border: 1px solid var(--border-dark);
+  transition: border-color 0.25s ease;
+}
+.faq-accordion-item[open] {
+  border-color: var(--border-bronze);
+  background-color: var(--color-navy-surface);
+}
+
+/* Modal Overlay */
 .legal-modal {
-  background: rgba(6, 18, 32, 0.85);
+  background: rgba(6, 18, 32, 0.88);
   backdrop-filter: blur(12px);
 }
 
 /* Image Zoom Effect */
 .img-zoom {
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .group:hover .img-zoom {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
-/* Responsive Utilities */
-@media (max-width: 768px) {
-  .hero-headline {
-    font-size: 2.25rem !important;
-    line-height: 1.2 !important;
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
